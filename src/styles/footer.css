@@ -1,0 +1,27 @@
+.footer__terms {
+  width: 60%;
+  margin: auto;
+  margin-bottom: 1%;
+}
+
+.footer__terms > i {
+  font-size: 13px;
+}
+
+.footer__social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.footer__icon {
+  padding: 1.5%;
+}
+
+.footer__icon > :first-child {
+  cursor: pointer;
+}
+/*# sourceMappingURL=footer.css.map */

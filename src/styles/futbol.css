@@ -1,0 +1,38 @@
+.futbol__news {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.futbol__newsImages {
+  border: solid 3px tomato;
+  height: 150px;
+  width: 200px;
+  margin-top: 2%;
+}
+
+.futbol__newsContainer {
+  margin: auto;
+  margin-top: 2%;
+  width: 200px;
+}
+
+.futbol__positions {
+  width: 42%;
+}
+
+.futbol__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.futbol__fixture {
+  margin-left: 4%;
+  display: inline-block;
+  width: 45%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+/*# sourceMappingURL=futbol.css.map */

@@ -1,0 +1,41 @@
+.theNavBar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 1%;
+}
+
+.navBar__link {
+  text-decoration: none;
+  padding: 5%;
+  cursor: pointer;
+  color: black;
+  font-weight: 350;
+  hover-color: #0D6EFD;
+}
+
+.navBar__left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  margin-left: 2%;
+  cursor: pointer;
+}
+
+.navBar__center {
+  margin: auto;
+}
+
+.navBar__right {
+  display: inline-block;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-right: 2%;
+  cursor: pointer;
+  margin-left: 10%;
+}
+/*# sourceMappingURL=navBar.css.map */

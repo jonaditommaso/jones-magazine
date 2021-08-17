@@ -1,0 +1,45 @@
+.nav {
+  margin-top: 1%;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.header__left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 1.5%;
+  height: 58px;
+}
+
+.header__hour {
+  padding: 15px;
+}
+
+.header__center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: auto;
+}
+
+.header__right {
+  padding: 1%;
+  display: contents;
+}
+
+.header__right > Button {
+  margin: 1%;
+  text-decoration: none;
+}
+/*# sourceMappingURL=header.css.map */
