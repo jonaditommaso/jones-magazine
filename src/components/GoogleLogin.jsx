@@ -1,5 +1,5 @@
 // import React, { useEffect } from 'react';
-// import GoogleButton from 'react-google-button';
+import GoogleButton from 'react-google-button';
 // import { connect } from 'react-redux';
 // import { signIn, signOut } from '../actions/index';
 // import { CLIENT_ID } from '../utils/clientIdGoogle';
@@ -148,7 +148,17 @@
  
 // export default connect(mapStateToProps, { signIn, signOut })(GoogleAuth);
 
-
+const GoogleLogin = () => {
+    return ( 
+        <div>
+            <GoogleButton 
+                label="Iniciar sesión con Google"
+            />
+        </div>
+     );
+}
+ 
+export default GoogleLogin;
  
 
 

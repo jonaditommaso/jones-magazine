@@ -1,0 +1,42 @@
+.bookImage__container {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  margin: 5%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 130px;
+}
+
+.bookImage {
+  height: 154px;
+  width: 100px;
+  cursor: pointer;
+  -webkit-box-shadow: 3.5px 2px 9px 3px #8a8888;
+          box-shadow: 3.5px 2px 9px 3px #8a8888;
+  margin: auto;
+}
+
+.bookImage:hover {
+  -webkit-transform: scale(1.15);
+          transform: scale(1.15);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.book__name {
+  font-weight: 650;
+  text-align: center;
+}
+
+.book__name:hover {
+  color: #0D6EFD;
+  cursor: pointer;
+}
+
+p {
+  margin: 0;
+}
+/*# sourceMappingURL=bookImage.css.map */

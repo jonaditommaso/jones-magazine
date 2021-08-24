@@ -1,0 +1,76 @@
+.show
+    background-color: #fafafa
+    width: 300px
+    height: 100vh
+    display: flex
+    position: fixed
+    top: 19%
+    left: 0
+    transition: 350ms
+    z-index: 2
+    box-shadow: 3.5px 2px 9px 3px #8a8888
+    overflow: auto
+
+.hidden
+    position: fixed
+    top: 0
+    left: -100%
+    transition: 350ms
+
+.sidebarWrap
+    margin-top: 2%
+    cursor: default
+
+.sidebar__items
+    width: 98%
+    &:hover
+        border-left: 6px solid #0D6EFD
+        background-color: #e9ebeb
+        cursor: pointer
+        transition: 0.2s
+
+.sidebar__hr
+    width: 90%
+    margin: auto
+
+.sidebar__submenu
+    display: flex
+    padding: 4px
+    text-align: start
+    margin-left: 4%
+    color: black
+    &:hover
+        color: #0D6EFD
+        transform: scale(1.03)
+
+.sidebar__item
+    // text-align: start
+    margin: auto
+    text-align: center
+    margin-top: 2%
+    // cursor: auto
+    width: 300px
+    // width: 278px
+    padding: 15px
+    color: black
+    // &:hover
+    //     border-left: 6px solid #0D6EFD
+    //     background-color: #dde0e0
+    //     cursor: pointer
+    //     transition: 0.2s
+.sidebar__arrow
+    display: inline
+    // background-color: tomato
+    // justify-content: flex-end
+
+.sidebar__itemLink
+    text-decoration: none
+    // margin-top: 7%
+    margin-left: 3%
+    font-weight: 400
+    // display: flex
+    // cursor: default
+    &:hover
+        // color: #0D6EFD
+
+        // cursor: pointer

@@ -1,10 +1,21 @@
   import React from 'react';
 import '../styles/table.css';
 import Table from 'react-bootstrap/Table';
+import {teamsData} from '../utils/teamsData'; 
 
 const TablePositions = () => {
 
-    const teams = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24', '25', '26'];
+//    console.log('ordenados', teamsData.sort((a, b) => {
+//         if (a.pts < b.pts) {
+//             return -1
+//         }
+//         if(a.pts > b.pts) {
+//             return 1
+//         }
+//         else {
+//             return 0
+//         }
+//     }))
     return ( 
         <div className="table">
             <Table striped bordered hover size="sm">
@@ -24,22 +35,21 @@ const TablePositions = () => {
                 </thead>
                
                     <tbody >
-                    {teams.map((team, i) => (
+                    {teamsData.map((team, i) => (
                         <tr key={i}>
-                            <td>1</td>
-                            <td style={{textAlign: 'initial'}}>San Lorenzo</td>
-                            <td>2</td>
-                            <td>22</td>
-                            <td>11</td>
-                            <td>23</td>
-                            <td>33</td>
-                            <td>13</td>
-                            <td>21</td>
-                            <td>{team}3</td>
+                            <td style={{width: '5px'}}>{team.shield}</td>
+                            <td style={{textAlign: 'initial'}}>{team.team}</td>
+                            <td>{team.pts}</td>
+                            <td>{team.pj}</td>
+                            <td>{team.pg}</td>
+                            <td>{team.pe}</td>
+                            <td>{team.pp}</td>
+                            <td>{team.gf}</td>
+                            <td>{team.gc}</td>
+                            <td>{team.dif}</td>
                         </tr>
                         ))}
                     </tbody>
-               
             </Table>
         </div>
     );

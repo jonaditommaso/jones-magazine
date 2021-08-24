@@ -14,7 +14,15 @@
 .futbol__newsContainer {
   margin: auto;
   margin-top: 2%;
-  width: 200px;
+}
+
+.futbol__teams {
+  cursor: auto;
+}
+
+.futbol__teams > img {
+  margin: 1%;
+  cursor: pointer;
 }
 
 .futbol__positions {

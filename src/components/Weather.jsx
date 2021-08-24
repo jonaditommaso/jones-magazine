@@ -26,6 +26,7 @@ function Weather() {
     const [temperature, setTemperature] = useState('');
     const [city, setCity] = useState('');
     const [country, setCountry] = useState('');
+    const [icon, setIcon] = useState('');
     
     useEffect(() => {
         
@@ -35,7 +36,8 @@ function Weather() {
                 const {data} = await axios.get(`https://api.openweathermap.org/data/2.5/weather?units=metric&lat=${latitude}&lon=${longitude}&appid=${WEATHER_KEY}`);
                 setCity(data.name);
                 setCountry(data.sys.country);
-                setTemperature(data.main.temp)
+                setTemperature(data.main.temp);
+                setIcon(data.weather[0].icon);
             },
              handleLocationError);      
             } 
@@ -52,6 +54,11 @@ function Weather() {
                 <i>{city}, {country}</i>
             </div>
             <div className="weather__temp">
+                <img 
+                    style={{width: '30px', height: '30px'}} 
+                    src={`/assets/img/weather-icons/${icon}.png`} 
+                    alt="weather"
+                /> 
                 <h5>{parseInt(temperature)} °C</h5>
             </div>
             

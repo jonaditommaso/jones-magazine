@@ -42,7 +42,7 @@ const Hour = () => {
         (hour && minutes && seconds && year && day && dayOfWeek && month) 
         ?
         <div className="hour">
-            {dayOfWeek} {day} de {month} del {year}
+            {dayOfWeek} {day} de {month}, {year}
             <br />
             {hour}:{minutes}:{seconds}
         </div>

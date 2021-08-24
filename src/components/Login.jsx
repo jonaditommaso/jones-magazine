@@ -4,6 +4,7 @@ import * as Yup from 'yup';
 import '../styles/signUp.css';
 import ShowPassword from '../utils/ShowPassword';
 import TextError from './TextError';
+import GoogleLogin from './GoogleLogin';
 
 const Login = () => {
 
@@ -28,7 +29,15 @@ const Login = () => {
         <>
         <div className="signUp__container">
             <div className="login__title">
-                <h5><i>Iniciar sesión en tu cuenta de JONES</i></h5>
+                <h5>Iniciar sesión en tu cuenta de JONES</h5>
+                <p><i>¿No tienes una cuenta? <span className="login__span">¡Crea una!</span></i></p>
+            </div>
+            <div className="login__google">
+                <GoogleLogin/>
+            </div>
+            
+            <div className="horizontal__line">
+                <span>O</span>
             </div>
              <Formik
                     initialValues={initialValues}

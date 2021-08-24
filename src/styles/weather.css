@@ -12,6 +12,13 @@
 
 .weather__temp {
   padding: 1%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.weather__temp > img {
+  margin-right: 3%;
 }
 
 .weather__location {

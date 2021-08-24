@@ -72,4 +72,24 @@
 .error {
   color: red;
 }
+
+.login__span {
+  color: #0D6EFD;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.horizontal__line {
+  margin: 2%;
+  text-align: center;
+}
+
+.login__google {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
 /*# sourceMappingURL=signUp.css.map */
