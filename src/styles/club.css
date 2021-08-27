@@ -53,4 +53,14 @@
   background: -webkit-gradient(linear, left top, right top, from(#1565C0), to(#b92b27));
   background: linear-gradient(to right, #1565C0, #b92b27);
 }
+
+.club__campeonatos {
+  text-align: start;
+  margin-left: 3%;
+  font-style: italic;
+}
+
+.club__campeonatos > p {
+  margin: 0;
+}
 /*# sourceMappingURL=club.css.map */

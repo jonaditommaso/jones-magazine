@@ -12,8 +12,8 @@ const Login = () => {
     const [password, setPassword] = useState('');
 
     const validationSchema = Yup.object({
-        email: Yup.string().email('Invalid format').required('Required!'),
-        password: Yup.string().required('Required!')
+        email: Yup.string().email('Invalid format').required('¡Requerido!'),
+        password: Yup.string().required('¡Requerido!')
     });
 
     const initialValues = {

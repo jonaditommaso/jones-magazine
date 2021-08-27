@@ -3,6 +3,13 @@
   margin: auto;
 }
 
+.featuredBook {
+  margin: 5%;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
 .library__nav {
   margin-top: 2%;
   margin-bottom: 2%;
@@ -17,5 +24,94 @@
 
 .library__link:hover {
   color: #0D6EFD;
+}
+
+.library__rightHeader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-top: 5px;
+  margin-right: 4%;
+  color: #0D6EFD;
+}
+
+.library__leftHeader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 20px;
+  color: #0D6EFD;
+}
+
+.library__headerContainer {
+  margin-top: 2%;
+  margin-bottom: 4%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.library__allBooks {
+  width: 80%;
+  margin: auto;
+}
+
+.library__filtered {
+  margin-top: 3%;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.library__searchBook {
+  border: none;
+  outline: none;
+}
+
+.library__searchBook::-webkit-input-placeholder {
+  text-align: center;
+  color: #0D6EFD;
+}
+
+.library__searchBook:-ms-input-placeholder {
+  text-align: center;
+  color: #0D6EFD;
+}
+
+.library__searchBook:-moz-placeholder {
+  text-align: center;
+  color: #0D6EFD;
+}
+
+.library__searchBook::-moz-placeholder {
+  text-align: center;
+  color: #0D6EFD;
+}
+
+.library__searchBook:focus {
+  -webkit-box-shadow: 1px 1px 7px #0d6efd;
+          box-shadow: 1px 1px 7px #0d6efd;
+  border-color: #86b7fe;
+  outline: none;
+  height: 25.5px;
+}
+
+.library__searchBook:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.library__searchBook:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+.library__searchBook:focus:-moz-placeholder {
+  color: transparent;
+}
+
+.library__searchBook:focus::-moz-placeholder {
+  color: transparent;
 }
 /*# sourceMappingURL=library.css.map */

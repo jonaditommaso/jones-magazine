@@ -28,29 +28,16 @@ const Header = () => {
                     
                 </div>
                 <div className="header__right">
-                    {/* <Link className="header__link"> */}
-                    {/* <Link to='/login'> */}
-                        {/* <div className="header__buttons"> */}
-                            <Button variant="link" size="md" >
-                                {/* <Link className="header__link"> */}
-                                INICIAR SESIÓN
-                                {/* </Link> */}
-                                
-                            </Button>
-                        {/* </div> */}
-                    
-                    {/* </Link> */}
-                        
-                    {/* </Link> */}
-                    {/* <Link className="header__link"> */}
-                    {/* <Link> */}
+                    <Link className="header__link" to='/login'>
+                        <Button variant="link" size="md" >
+                            INICIAR SESIÓN
+                        </Button>
+                    </Link>
+                    <Link className="header__link" to='/signup'>
                         <Button variant="primary" size="md" >
                             REGISTRATE
                         </Button>
-                    {/* </Link> */}
-                        
-                    {/* </Link> */}
-                    
+                    </Link>
                 </div>
                 
             </div>

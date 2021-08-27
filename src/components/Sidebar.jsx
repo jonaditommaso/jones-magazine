@@ -26,6 +26,11 @@ const Sidebar = ({open, isClicked}) => {
     const showSubItem = () => {
         setSubItem(!subItem)
     }
+
+    const handleGo = () => {
+        setSidebar(false);
+        open(false);
+    }
     
 
     return (
@@ -34,7 +39,7 @@ const Sidebar = ({open, isClicked}) => {
                 <div className="sidebarWrap">{sidebarData.map((item, index) => {
                         return (
                             <>
-                                <div className="sidebar__items">
+                                <div className="sidebar__items" key={index} >
                                     <Link 
                                         to={item.path} 
                                         className="sidebar__itemLink" 
@@ -42,25 +47,30 @@ const Sidebar = ({open, isClicked}) => {
                                         // onMouseLeave={item.subItem && showSubItem}
                                         onClick={item.subItem && showSubItem}
                                     >
-                                        <div key={index} className="sidebar__item">
+                                        <div className="sidebar__item">
                                             {item.title}
                                             
                                         </div>
-                                        <div className="sidebar__arrow">
-                                        {/* {item.subItem && !subItem 
-                                        ? <KeyboardArrowDownIcon />
-                                        : item.subItem
-                                        ? <KeyboardArrowUpIcon />
-                                        : null
-                                        } */}
-                                            <SubMenu item={item} subItem={subItem}/>
+                                        <div>
+                                            <div className="sidebar__arrow">
+                                            {/* {item.subItem && !subItem 
+                                            ? <KeyboardArrowDownIcon />
+                                            : item.subItem
+                                            ? <KeyboardArrowUpIcon />
+                                            : null
+                                            } */}
+                                                <SubMenu item={item} subItem={subItem}/>
+                                            </div>
                                         </div>
+                                        
                                         
                                         <div>
                                             {subItem && item.subItem?.map((subMenu, i) => {
                                                 return (
-                                                    <div key={i} className="sidebar__submenu">
-                                                        {subMenu.title}
+                                                    <div key={i} >
+                                                        <Link to={subMenu.path} className="sidebar__submenu" onClick={handleGo}>
+                                                            {subMenu.title}
+                                                        </Link>
                                                     </div>
                                                     
                                                 )

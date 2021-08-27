@@ -23,7 +23,10 @@ const Footer = () => {
                     <InstagramIcon fontSize="large" />
                 </div>
                 <div className="footer__icon">
-                    <TwitterIcon fontSize="large" />
+                    <a href="https://twitter.com/revistajones" target='_blank' rel="noopener noreferrer" style={{display: 'inline-flex'}}>
+                        <TwitterIcon fontSize="large"  />
+                    </a>
+                    
                 </div>
                 <div className="footer__icon">
                     <PinterestIcon fontSize="large" />

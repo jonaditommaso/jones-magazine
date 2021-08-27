@@ -41,7 +41,6 @@ const Home = () => {
         const getNews = async () => {
             const newService = new NewsService();
             const {data} = await newService.getBusinessNews(`/top-headlines?country=ar&apiKey=${NEWS_KEY}&category=business`);
-            console.log(data)
 
             const dataFiltered = data.articles.filter(haveImage => haveImage.urlToImage);
             setPrincipalNew(dataFiltered[0].title);
@@ -160,11 +159,21 @@ const Home = () => {
                 <div>
                     <h4><Link className="navBar__link" to='/library'>VISITA NUESTRA TIENDA</Link></h4>
                 </div>
-                <BookImage src="/assets/img/monje.jpg" alt="book1" />
-                <BookImage src="/assets/img/secretos.jpg" alt="book2" />
-                <BookImage src="/assets/img/elon.jpg" alt="book3" />
-                <BookImage src="/assets/img/dinero.jpg" alt="book4" />
+                <div className="featuredBook">
+                    <BookImage src="/assets/img/books/monje.jpg" alt="book1" />
+                </div>
+                <div className="featuredBook">
+                    <BookImage src="/assets/img/books/secretos.jpg" alt="book2" />
+                </div>
+                <div className="featuredBook">
+                    <BookImage src="/assets/img/books/elon.jpg" alt="book3" />
+                </div>
+                <div className="featuredBook">
+                    <BookImage src="/assets/img/books/dinero.jpg" alt="book4" />
+                </div>
             </div>
+
+            <hr style={{width: '70%', margin: 'auto'}} />
 
             <div className="home__quote">
                 <p className="quote"><i>"Las metas no se compran en una tienda, sino que nacen de nuestra pasión, de la incomodidad interna, de nuestra inconformidad y de la necesidad de progresar. <br />El progreso es igual a la felicidad. Por ello, si no tienes una meta, estás en graves problemas."</i></p>

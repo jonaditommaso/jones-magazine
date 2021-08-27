@@ -11,7 +11,8 @@ import Footer from './components/Footer';
 import SelectedNews from './components/SelectedNews';
 import Finance from './components/Finance';
 import Club from './components/Club';
-// import Sidebar from './components/Sidebar';
+import InsideTheNews from './components/InsideTheNews';
+import Checkout from './components/Checkout';
 
 function App() {
   return (
@@ -26,9 +27,9 @@ function App() {
           <Route path='/futbol' exact component={Futbol} />
           <Route path='/news/:id' exact component={SelectedNews} />
           <Route path='/finance' exact component={Finance} />
-          {/* <Route path='/sidebar' exact component={Sidebar} /> */}
-           {/* BORRAR */}
-           <Route path='/club/:club' exact component={Club} />
+          <Route path='/club/:club' exact component={Club} />
+          <Route path='/insidenews' exact component={InsideTheNews} />
+          <Route path='/checkout' exact component={Checkout} />
         </Switch>
         <Footer />
       </div>

@@ -34,11 +34,15 @@
 }
 
 .header__right {
-  padding: 1%;
   display: contents;
 }
 
-.header__right > Button {
+.header__link {
+  display: contents;
+  text-decoration: none;
+}
+
+.header__link > Button {
   margin: 1%;
   text-decoration: none;
 }

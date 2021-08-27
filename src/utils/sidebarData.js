@@ -49,7 +49,6 @@ export const sidebarData = [
     },
     {
         title: 'CONTACTANOS',
-        path: '/contactus',
         subItem: [
             {
                 title: 'LinkedIn'

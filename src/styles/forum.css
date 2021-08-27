@@ -1,0 +1,44 @@
+.forum {
+  margin: auto;
+  margin-top: 5%;
+  margin-left: 4%;
+}
+
+.forum__topics {
+  text-align: start;
+}
+
+h3:hover {
+  color: #0D6EFD;
+  cursor: pointer;
+}
+
+.forum__create {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #0D6EFD;
+  margin-top: 5%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.forum__createIcon {
+  cursor: pointer;
+  margin-left: 1%;
+}
+
+.forum__form {
+  margin-top: 3%;
+}
+
+.forum__createButton {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+/*# sourceMappingURL=forum.css.map */

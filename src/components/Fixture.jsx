@@ -2,7 +2,7 @@ import Table from 'react-bootstrap/Table';
 
 const Fixture = () => {
     return ( 
-        <div>
+        <div style={{marginTop: '50px'}}>
             {/* <Table striped bordered hover size="sm">
                 <thead>
                     <tr>
@@ -30,7 +30,7 @@ const Fixture = () => {
                     </tr>
                 </tbody>
             </Table> */}
-           FIXTURE NO DISPONIBLE TODAVIA
+           FIXTURE TODAVIA NO DISPONIBLE 
         </div>
     );
 }

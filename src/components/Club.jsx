@@ -22,6 +22,10 @@ const Club = () => {
     const [cutNews2, setCutNews2] = useState('');
     const [cutNews3, setCutNews3] = useState('');
 
+    const [copasNac, setCopasNac] = useState('');
+    const [copasInter, setCopasInter] = useState('');
+    const [ligas, setLigas] = useState('');
+
     const {club} = useParams();
     const param = club.toString();
     
@@ -55,22 +59,37 @@ const Club = () => {
         if(param === 'boca') {
             setClubColors('club__boca');
             setTeam('BOCA JUNIORS');
+            setLigas('28');
+            setCopasNac('8');
+            setCopasInter('18');
         }
         if(param === 'river') {
             setClubColors('club__river');
             setTeam('RIVER PLATE');
+            setLigas('35');
+            setCopasNac('12');
+            setCopasInter('12');
         }
         if(param === 'independiente') {
             setClubColors('club__independiente');
             setTeam('INDEPENDIENTE');
+            setLigas('14');
+            setCopasNac('3');
+            setCopasInter('18');
         }
         if(param === 'racing') {
             setClubColors('club__racing');
             setTeam('RACING S.A');
+            setLigas('9');
+            setCopasNac('4');
+            setCopasInter('3');
         }
         if(param === 'sanlorenzo') {
             setClubColors('club__sanlorenzo');
             setTeam('SAN LORENZO');
+            setLigas('12');
+            setCopasNac('2');
+            setCopasInter('3');
         }
     }, [newsClub1, newsClub2, newsClub3]);
     
@@ -129,6 +148,15 @@ const Club = () => {
                         />
                     </div>
                     
+                </div>
+            </div>
+                <hr style={{width: '75%', margin: 'auto'}} />
+                
+            <div style={{marginTop: '2%'}}>
+                <div className="club__campeonatos">
+                    <p><span style={{color: '#0D6EFD', fontWeight: '700'}}>{ligas}</span> campeonatos locales</p>
+                    <p><span style={{color: '#0D6EFD', fontWeight: '700'}}>{copasNac}</span> copas nacionales</p>
+                    <p><span style={{color: '#0D6EFD', fontWeight: '700'}}>{copasInter}</span> copas internacionales</p>
                 </div>
             </div>
         </>
