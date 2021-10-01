@@ -1,0 +1,55 @@
+.nav
+    margin-top: 1%
+    display: inline-flex
+    justify-content: flex-end
+
+.header__left
+    display: flex
+    align-items: center
+    margin-left: 1.5%
+    height: 58px
+
+.header__hour
+    padding: 15px
+
+.header__center
+    display: flex
+    justify-content: center
+    margin: auto
+
+.header__right
+    display: contents
+
+.header__link
+    display: contents
+    text-decoration: none
+    > Button
+        margin: 1%
+        text-decoration: none
+
+.exitIcon
+    margin-right: 40px
+    color: black
+    &:hover
+        color: #0d6efd
+        cursor: pointer
+
+@media (max-width: 500px)
+    .nav
+        display: block
+        flex-direction: column
+    .header__center
+        display: block
+    .header__left
+        margin: auto
+    .header__link > Button
+        margin: auto
+    .header__right
+        display: flex
+        margin-left: 20px
+        width: 340px
+    .header__name > h6
+        margin-left: 40px !important
+
+    .exitIcon
+        font-size: 25px !important

@@ -1,0 +1,31 @@
+.table {
+  margin-top: 10%;
+  margin-left: 4%;
+  width: 70%;
+}
+
+.table__fields > th {
+  margin: 20px;
+}
+
+.first {
+  background-color: #2df72dde !important;
+}
+
+@media (max-width: 500px) {
+  td > img {
+    width: 18px;
+    height: 18px;
+  }
+  td {
+    font-size: 12px;
+    width: 112px;
+  }
+  th {
+    font-size: 14px;
+  }
+  .table {
+    margin-left: 1.5%;
+  }
+}
+/*# sourceMappingURL=table.css.map */

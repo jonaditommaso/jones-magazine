@@ -1,0 +1,134 @@
+.home__loading {
+  height: 500px;
+  width: 800px;
+  margin: auto;
+  margin-top: 250px;
+}
+
+.home__principal {
+  display: inline-block;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-left: 150px;
+  margin-top: 20px;
+}
+
+.home__principalNews {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.home__aside {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: auto;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 15px;
+  width: 20%;
+}
+
+.new__aside {
+  margin-top: 10px;
+  margin-bottom: 15%;
+}
+
+.news__title > h4 {
+  font-weight: 350;
+}
+
+.home__news {
+  background-color: #F0F1F2;
+  padding: 2%;
+  width: 85%;
+  margin: auto;
+  margin-top: 5%;
+  border-radius: 5px;
+}
+
+.home__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: auto;
+}
+
+.home__containerChild {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: auto;
+}
+
+.home__library {
+  padding: 2%;
+  width: 70%;
+  margin: auto;
+  margin-top: 5%;
+}
+
+.home__library > img {
+  margin: 4%;
+  cursor: pointer;
+}
+
+.home__quote {
+  background-color: #F0F1F2;
+  padding: 2%;
+  width: 70%;
+  margin: auto;
+  margin-top: 5%;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 3%;
+  height: 150px;
+}
+
+.quote {
+  width: 70%;
+  height: 100px;
+}
+
+.quote__img {
+  position: relative;
+  bottom: 120px;
+  left: 70px;
+}
+
+@media (max-width: 500px) {
+  .home__principal {
+    margin-left: 2px;
+  }
+  .home__principalNews {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .home__containerChild {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .home__aside {
+    width: 82%;
+  }
+  .home__quote {
+    height: 230px;
+    width: 90%;
+    margin-top: 17%;
+  }
+  .quote__img {
+    bottom: 100px;
+    left: 20px;
+  }
+}
+/*# sourceMappingURL=home.css.map */

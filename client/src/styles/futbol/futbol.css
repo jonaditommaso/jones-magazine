@@ -1,0 +1,77 @@
+.futbol__news {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.futbol__newsImages {
+  border: solid 3px tomato;
+  height: 150px;
+  width: 200px;
+  margin-top: 2%;
+}
+
+.futbol__newsContainer {
+  margin: auto;
+  margin-top: 2%;
+}
+
+.futbol__teams {
+  cursor: auto;
+}
+
+.futbol__teams > img {
+  margin: 1%;
+  cursor: pointer;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.futbol__teams > img:hover {
+  -webkit-transform: scale(1.17);
+          transform: scale(1.17);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.futbol__positions {
+  width: 42%;
+}
+
+.futbol__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.futbol__fixture {
+  margin-left: 4%;
+  display: inline-block;
+  width: 45%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media (max-width: 500px) {
+  .futbol__content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .futbol__fixture {
+    margin: auto;
+  }
+  .futbol__news {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: auto;
+  }
+  hr {
+    margin: auto;
+  }
+}
+/*# sourceMappingURL=futbol.css.map */

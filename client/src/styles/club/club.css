@@ -1,0 +1,73 @@
+.club__coverPage {
+  height: 120px;
+  color: white;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.club__description {
+  margin: auto;
+  padding: 20px;
+}
+
+.club__principalNews {
+  margin-top: 20px;
+}
+
+.club__secondaryNews {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  padding: 30px;
+}
+
+.club__secondaryNew {
+  padding: 50px;
+}
+
+.club__boca {
+  background: -webkit-gradient(linear, right top, left top, from(yellow), to(blue));
+  background: linear-gradient(to left, yellow, blue);
+}
+
+.club__river {
+  background: #EF3B36;
+  background: -webkit-gradient(linear, left top, right top, from(#EF3B36), to(#FFFFFF));
+  background: linear-gradient(to right, #EF3B36, #FFFFFF);
+}
+
+.club__independiente {
+  background: #ED213A;
+  background: -webkit-gradient(linear, right top, left top, from(#93291E), to(#ED213A));
+  background: linear-gradient(to left, #93291E, #ED213A);
+}
+
+.club__racing {
+  background: #6DD5FA;
+  background: -webkit-gradient(linear, left top, right top, from(#6DD5FA), to(#FFFFFF));
+  background: linear-gradient(to right, #6DD5FA, #FFFFFF);
+}
+
+.club__sanlorenzo {
+  background: #b92b27;
+  background: -webkit-gradient(linear, left top, right top, from(#1565C0), to(#b92b27));
+  background: linear-gradient(to right, #1565C0, #b92b27);
+}
+
+.club__campeonatos {
+  text-align: start;
+  font-style: italic;
+  padding: 1%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.club__data > p {
+  margin: 0;
+  margin-left: 6%;
+  color: white;
+  font-weight: 600;
+  width: 600px;
+}
+/*# sourceMappingURL=club.css.map */

@@ -1,0 +1,109 @@
+.signUp__container {
+  width: 50%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-radius: 5px;
+  border: 2px solid #0D6EFD;
+  -webkit-box-shadow: 1px 1px 5px black;
+          box-shadow: 1px 1px 5px black;
+  padding: 20px;
+  margin: auto;
+  margin-top: 4%;
+}
+
+.theInput {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  padding: 2%;
+  outline: none;
+}
+
+.theInput:focus {
+  -webkit-box-shadow: 1px 1px 7px #0d6efd;
+          box-shadow: 1px 1px 7px #0d6efd;
+  border-color: #86b7fe;
+  outline: none;
+}
+
+.theField {
+  margin-bottom: 10px;
+}
+
+.submitButton {
+  background: #0D6EFD;
+  width: 100%;
+  border: 1px solid;
+  color: white;
+  margin-top: 10px;
+  padding: 2%;
+  border-radius: 4px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.submitButton:hover {
+  cursor: pointer;
+}
+
+.login__title {
+  margin: 2%;
+}
+
+.textLogin1 {
+  font-size: 15px;
+  margin-top: 1%;
+}
+
+.textLogin2 {
+  font-size: 10px;
+}
+
+.error {
+  color: red;
+}
+
+.login__span {
+  color: #0D6EFD;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.horizontal__line {
+  margin: 2%;
+  text-align: center;
+}
+
+.login__google {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media (max-width: 500px) {
+  .signUp__container {
+    width: 300px;
+  }
+}
+/*# sourceMappingURL=signUp.css.map */

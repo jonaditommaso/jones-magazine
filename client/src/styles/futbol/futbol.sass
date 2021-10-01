@@ -1,0 +1,52 @@
+.futbol__news
+    display: flex
+
+.futbol__newsImages
+    border: solid 3px tomato
+    height: 150px
+    width: 200px
+    margin-top: 2%
+
+.futbol__newsContainer
+    margin: auto
+    margin-top: 2%
+    // width: 200px
+    // display: inline-block
+        // width: 100%
+        // text-align: center
+
+.futbol__teams
+    cursor: auto
+    // padding: 1%
+    >img
+        margin: 1%
+        cursor: pointer
+        transition: 0.4s
+        &:hover
+            transform: scale(1.17)
+            transition: 0.4s
+
+.futbol__positions
+    width: 42%
+    // background-color: #aeddff
+    // background-color: #d8eeff
+
+.futbol__content
+    display: flex
+
+.futbol__fixture
+    margin-left: 4%
+    display: inline-block
+    width: 45%
+    justify-content: center
+
+@media (max-width: 500px)
+    .futbol__content
+        flex-direction: column
+    .futbol__fixture
+        margin: auto
+    .futbol__news
+        flex-direction: column
+        margin: auto
+    hr
+        margin: auto

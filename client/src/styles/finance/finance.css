@@ -1,0 +1,51 @@
+.foreignExchange {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 85%;
+  margin: auto;
+}
+
+.finance__foreignExchange {
+  margin: auto;
+  color: #0D6EFD;
+  font-weight: 550;
+}
+
+.finance__principal {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.finance__secondaryNews {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  padding: 30px;
+}
+
+.finance__secondaryNew {
+  padding: 50px;
+}
+
+@media (max-width: 500px) {
+  .finance__secondaryNews {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 3px;
+  }
+  .finance__secondaryNew {
+    padding: 5px;
+  }
+  .foreignExchange {
+    width: 95%;
+  }
+  .finance__foreignExchange {
+    font-size: 10px;
+    width: 60px;
+  }
+}
+/*# sourceMappingURL=finance.css.map */

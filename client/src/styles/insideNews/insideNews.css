@@ -1,0 +1,22 @@
+h4 {
+  width: 60%;
+  margin: auto;
+  margin-bottom: 1%;
+}
+
+.inside__img > img {
+  border-radius: 15px;
+}
+
+.inside__description {
+  font-size: 25px;
+  font-weight: 100;
+  width: 75%;
+  margin: auto;
+}
+
+.inside__content {
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+/*# sourceMappingURL=insideNews.css.map */

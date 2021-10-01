@@ -1,0 +1,41 @@
+.container {
+  position: fixed;
+  bottom: 8%;
+  left: 92%;
+  text-align: start;
+}
+
+.container:hover {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  opacity: 0.9;
+}
+
+.goTopContainer {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  padding: 10px;
+  background-color: #0D6EFD;
+  border-radius: 50%;
+  cursor: pointer;
+  -webkit-box-shadow: 3px 4px 8px #979797;
+          box-shadow: 3px 4px 8px #979797;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+.goTop {
+  color: white;
+}
+
+.hide {
+  display: none;
+}
+
+@media (max-width: 500px) {
+  .container {
+    left: 65%;
+  }
+}
+/*# sourceMappingURL=goTopButton.css.map */

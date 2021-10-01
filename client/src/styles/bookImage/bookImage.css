@@ -1,0 +1,106 @@
+.bookImage__container {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 130px;
+}
+
+.bookImage {
+  height: 154px;
+  width: 100px;
+  cursor: pointer;
+  -webkit-box-shadow: 3.5px 2px 9px 3px #8a8888;
+          box-shadow: 3.5px 2px 9px 3px #8a8888;
+  margin: auto;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.bookImage:hover {
+  -webkit-transform: scale(1.15);
+          transform: scale(1.15);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.bookImage__bigContainer {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 180px;
+}
+
+.bookImageBig {
+  height: 250px;
+  width: 162px;
+  cursor: pointer;
+  -webkit-box-shadow: 3.5px 2px 9px 3px #8a8888;
+          box-shadow: 3.5px 2px 9px 3px #8a8888;
+  margin: auto;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.bookImageBig:hover {
+  -webkit-transform: scale(1.15);
+          transform: scale(1.15);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.book__name {
+  margin-top: 2px;
+  margin-bottom: 0;
+  font-weight: 650;
+  text-align: center;
+}
+
+.book__name:hover {
+  color: #0D6EFD;
+  cursor: pointer;
+}
+
+.book__author {
+  margin: 0;
+}
+
+.book__price {
+  margin: 3%;
+  color: #0D6EFD;
+}
+
+.book__button {
+  margin-bottom: 30px;
+  color: white;
+  background-color: #0D6EFD;
+  border: none;
+  border-radius: 8px;
+  padding: 5px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.book__button:hover {
+  background-color: #0d61df;
+}
+
+@media (max-width: 500px) {
+  .bookImageBig {
+    width: 100px;
+    height: 154px;
+    display: block;
+  }
+  .book__button {
+    padding: 2px;
+    width: 130px !important;
+  }
+}
+/*# sourceMappingURL=bookImage.css.map */

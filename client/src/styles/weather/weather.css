@@ -1,0 +1,30 @@
+.weather {
+  background-color: rgba(234, 237, 237, 0.5);
+  border-radius: 4px;
+  padding: 3%;
+  display: contents;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 4%;
+}
+
+.weather__temp {
+  padding: 1%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.weather__temp > img {
+  margin-right: 3%;
+}
+
+.weather__location {
+  font-size: 15px;
+}
+/*# sourceMappingURL=weather.css.map */

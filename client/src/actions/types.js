@@ -1,0 +1,8 @@
+export const ADD_TO_BASKET = 'ADD_TO_BASKET';
+export const REMOVE_FROM_BASKET = 'REMOVE_FROM_BASKET';
+export const EMPTY_BASKET = 'EMPTY_BASKET';
+export const SIGN_IN_GOOGLE = 'SIGN_IN_GOOGLE';
+export const SIGN_OUT_GOOGLE = 'SIGN_OUT_GOOGLE';
+
+export const GET_NEWS = 'GET_NEWS';
+export const GET_CONVERSATION = 'GET_CONVERSATION'
