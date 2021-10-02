@@ -30,7 +30,7 @@ const Header = ({userGoogle, signOutGoogle}) => {
     }
 
     return ( 
-        <div className="theHeader">
+        <>
             <div className="nav">
                 <div className="header__left">
                     {/* Quiénes somos */}
@@ -85,7 +85,7 @@ const Header = ({userGoogle, signOutGoogle}) => {
             <div style={{margin: '2px'}}>
                 <NavBar />
             </div>
-        </div>
+        </>
      );
 }
 

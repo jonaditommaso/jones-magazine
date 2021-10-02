@@ -27,6 +27,7 @@ function Science() {
 
     return (
         <div>
+            <hr />
             <div className="finance__principal">
                 <NewsBox 
                     newImage={scienceNews[1]?.urlToImage}

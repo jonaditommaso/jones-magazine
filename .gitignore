@@ -9,7 +9,7 @@
 ### CLIENTE ###
 
 /build
-/client/src/utils/keys.js
+# /client/src/utils/keys.js
 /client/node_modules
 
 # production
@@ -33,3 +33,5 @@
 /client/yarn-debug.log*
 /client/yarn-error.log*
 
+
+.vercel
