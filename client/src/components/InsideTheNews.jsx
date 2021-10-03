@@ -4,7 +4,6 @@ import '../styles/insideNews/insideNews.css'
 
 const InsideTheNews = ({noticia}) => {
 
-    console.log('redu', noticia)
     return ( 
         <div>
             <hr />
@@ -20,7 +19,7 @@ const InsideTheNews = ({noticia}) => {
             </div>
 
             <div className="inside__content">
-                Contenido de la noticia no disponible por el momento. Disculpe las molestias.
+                {noticia.content}
             </div>
 
             {/* <div>

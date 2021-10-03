@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import '../styles/finance/finance.css';
 import NewsService from '../services/NewsService';
-import { NEWS_KEY } from '../utils/keys';
 import NewsBox from './NewsBox';
+import axios from 'axios';
 
 const Finance = () => {
 
@@ -14,19 +14,15 @@ const Finance = () => {
 
     useEffect(() => {
         const getNews = async () => {
-            const newService = new NewsService();
-            const {data} = await newService.getBusinessNews(`/top-headlines?country=ar&apiKey=${NEWS_KEY}&category=business`);
-            const dataFiltered = data.articles.filter(haveImage => haveImage.urlToImage);
-            setFinanceNews(dataFiltered);
-            // setNewsOne(data.articles[3].title);
-            // setImageOne(data.articles[3].urlToImage);
+            const {data} = await axios.get('http://localhost:5000/api/finance');
+            setFinanceNews(data)
 
             const getForeignExchange = async () => {
                 const newService = new NewsService();
                 const {data} = await newService.getForex('/latest'); 
                 setForeignExchange(data);   
                 localStorage.setItem('divisas', JSON.stringify(data));
-                console.log('me estas llamando de nuevo');
+                console.log('calling again');
             }
 
             const thereAreForeignExchange = () => {
@@ -49,8 +45,6 @@ const Finance = () => {
         // getForeignExchangePrice();
     }, []);
 
-    console.log('pega', foreignExchange);
-
     return ( 
         <div>
             <hr />
@@ -72,10 +66,10 @@ const Finance = () => {
 
             <div className="finance__principal">
                 <NewsBox 
-                    newImage={financeNews[3]?.urlToImage}
-                    newTitle={financeNews[3]?.title}
-                    // cut={cutP}
-                    description={financeNews[3]?.description}
+                    newImage={financeNews[1]?.urlToImage}
+                    newTitle={financeNews[1]?.title}
+                    description={financeNews[1]?.description}
+                    content={financeNews[1]?.content}
                     big
                 />
             </div>
@@ -83,23 +77,31 @@ const Finance = () => {
             <div className="finance__secondaryNews">
                 <div className="finance__secondaryNew">
                     <NewsBox 
-                        newImage={financeNews[4]?.urlToImage}
-                        newTitle={financeNews[4]?.title}
-                        description={financeNews[4]?.description}
-                        // cut={cutP}
+                        newImage={financeNews[0]?.urlToImage}
+                        newTitle={financeNews[0]?.title}
+                        description={financeNews[0]?.description}
+                        content={financeNews[0]?.content}
                     />
                 </div>
                 <div className="finance__secondaryNew">
                     <NewsBox 
-                        newImage={financeNews[5]?.urlToImage}
-                        newTitle={financeNews[5]?.title}
-                        description={financeNews[5]?.description}
-                        // cut={cutP}
+                        newImage={financeNews[2]?.urlToImage}
+                        newTitle={financeNews[2]?.title}
+                        description={financeNews[2]?.description}
+                        content={financeNews[2]?.content}
+                    />
+                </div>
+                <div className="finance__secondaryNew">
+                    <NewsBox 
+                        newImage={financeNews[3]?.urlToImage}
+                        newTitle={financeNews[3]?.title}
+                        description={financeNews[3]?.description}
+                        content={financeNews[3]?.content}
                     />
                 </div>
             </div>
         </div>
-     );
+    );
 }
  
 export default Finance;

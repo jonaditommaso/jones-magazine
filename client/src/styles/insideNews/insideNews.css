@@ -16,7 +16,11 @@ h4 {
 }
 
 .inside__content {
+  width: 70%;
+  margin: auto;
   margin-top: 5%;
   margin-bottom: 5%;
+  font-size: 18px;
+  font-weight: 100;
 }
 /*# sourceMappingURL=insideNews.css.map */

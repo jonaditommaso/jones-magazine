@@ -1,7 +1,7 @@
 .table {
   margin-top: 10%;
   margin-left: 4%;
-  width: 70% !important;
+  width: 70%;
 }
 
 .table__fields > th {
@@ -10,6 +10,25 @@
 
 .first {
   background-color: #2df72dde !important;
+}
+
+#teams {
+  width: 150px;
+}
+
+#points {
+  font-weight: 700;
+}
+
+#teamContainer {
+  text-align: initial;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#teamName {
+  margin-left: 2px;
 }
 
 @media (max-width: 500px) {

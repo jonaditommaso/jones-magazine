@@ -10,7 +10,7 @@ const TablePositions = () => {
 
     useEffect(() => {
         const getTeams = async() => {
-            const {data} = await axios.get('http://localhost:5000/api/football/positionsData');
+            const {data} = await axios.get('http://localhost:5000/api/positionsData');
             
             setTeamsData(data?.sort((a, b) => {
                 if( b.pts === a.pts ){
@@ -22,7 +22,6 @@ const TablePositions = () => {
         if(!teamsData) {
             getTeams();
         }
-        console.log(teamsData)
     }, [teamsData]);
 
 //    const teams = teamsData?.sort((a, b) => {
@@ -37,7 +36,7 @@ const TablePositions = () => {
                 <thead>
                     <tr>
                         <th>#</th>
-                        <th style={{width: '150px'}}>Equipos</th>
+                        <th id="teams">Equipos</th>
                         <th>Pts</th>
                         <th>PJ</th>
                         <th>PG</th>
@@ -53,11 +52,11 @@ const TablePositions = () => {
                     {teamsData?.map((team, i) => (
                         <tr key={i} className={i === 0 ? 'first' : null}>
                             <td>{i + 1}</td>
-                            <td style={{textAlign: 'initial', display: 'flex'}}>
+                            <td id="teamContainer">
                                 <img src={team.shield} alt={team.team}/>
-                                <span style={{marginLeft: '2px'}}>{team.team}</span>
+                                <span id="teamName">{team.team}</span>
                             </td>
-                            <td style={{fontWeight: 700}}>{team.pts}</td>
+                            <td id="points">{team.pts}</td>
                             <td>{team.pj}</td>
                             <td>{team.pg}</td>
                             <td>{team.pe}</td>

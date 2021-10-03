@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react'
-import NewsService from '../../services/NewsService'
 import NewsBox from '../NewsBox'
-import { NEWS_KEY } from '../../utils/keys'
 import '../../styles/finance/finance.css'
+import axios from 'axios'
 
 function Science() {
 
@@ -10,11 +9,9 @@ function Science() {
 
     useEffect(() => {
         const getNews = async () => {
-            const newService = new NewsService();
-            const { data } = await newService.getScienceNews(`/top-headlines?country=ar&apiKey=${NEWS_KEY}&category=science`)
-            const dataFiltered = data.articles.filter(haveImage => haveImage.urlToImage);
-            setScienceNews(dataFiltered);
-            localStorage.setItem('science', JSON.stringify(dataFiltered));
+            const { data } = await axios.get('http://localhost:5000/api/science');
+            setScienceNews(data)
+            localStorage.setItem('science', JSON.stringify(scienceNews));
         }
         if(!localStorage.getItem('science')) {
             getNews();
@@ -30,9 +27,10 @@ function Science() {
             <hr />
             <div className="finance__principal">
                 <NewsBox 
-                    newImage={scienceNews[1]?.urlToImage}
-                    newTitle={scienceNews[1]?.title}
-                    description={scienceNews[1]?.description}
+                    newImage={scienceNews[0]?.urlToImage}
+                    newTitle={scienceNews[0]?.title}
+                    description={scienceNews[0]?.description}
+                    ontent={scienceNews[0]?.content}
                     big
                 />
             </div>
@@ -43,6 +41,7 @@ function Science() {
                         newImage={scienceNews[2]?.urlToImage}
                         newTitle={scienceNews[2]?.title}
                         description={scienceNews[2]?.description}
+                        ontent={scienceNews[2]?.content}
                     />
                 </div>
                 <div className="finance__secondaryNew">
@@ -50,9 +49,17 @@ function Science() {
                         newImage={scienceNews[3]?.urlToImage}
                         newTitle={scienceNews[3]?.title}
                         description={scienceNews[3]?.description}
+                        content={scienceNews[3]?.content}
                     />
                 </div>
-                
+                <div className="finance__secondaryNew">
+                    <NewsBox 
+                        newImage={scienceNews[1]?.urlToImage}
+                        newTitle={scienceNews[1]?.title}
+                        description={scienceNews[1]?.description}
+                        content={scienceNews[1]?.content}
+                    />
+                </div>
             </div>
         </div>
     )

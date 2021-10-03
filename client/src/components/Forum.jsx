@@ -3,37 +3,37 @@ import '../styles/forum/forum.css';
 import AddCircleOutlineIcon from '@material-ui/icons/AddCircleOutline';
 import { Button, Form } from 'react-bootstrap';
 import RemoveIcon from '@material-ui/icons/Remove';
-import { Link } from 'react-router-dom';
 import Conversation from './Conversation';
 import axios from 'axios';
 
 function Forum() {
 
     const [showForm, setShowForm] = useState(false);
-    const [selectedImage, setSelectedImage] = useState(null);
     const [conversations, setConversations] = useState('');
     const [title, setTitle] = useState('')
     const [description, setDescription] = useState('');
     const [content, setContent] = useState('');
+    const [callGetConversation, setCallGetConversation] = useState(false)
 
     const handleClick = () => {
         setShowForm(!showForm);
     }
 
     useEffect(() => {
-        getConversation()
-    }, []);
+        getConversation();
+        setCallGetConversation(false)
+    }, [callGetConversation, conversations]);
 
     const getConversation = async () => {
         const response = await axios.get('http://localhost:5000/api/conversation')
         setConversations(response.data)
-        console.log(response)
     }
 
     const createConversation = async () => {
+        setShowForm(false)
          await axios.post('http://localhost:5000/api/conversation', 
         {title, description, content});
-        getConversation()
+        setCallGetConversation(true);
     }
 
     return (
@@ -74,9 +74,10 @@ function Forum() {
                         </Form.Group>
                         <Form.Group className="mb-3" controlId="exampleForm.ControlInput2">
                             <Form.Control 
-                                type="text" 
+                                as="textarea" 
                                 placeholder="Descripción" 
                                 required 
+                                rows={2}
                                 value={description}
                                 onChange={e => setDescription(e.target.value)}
                             />
@@ -84,7 +85,7 @@ function Forum() {
                         <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
                             <Form.Control 
                                 as="textarea" 
-                                rows={3} 
+                                rows={6} 
                                 placeholder="Exposición" 
                                 required 
                                 value={content}

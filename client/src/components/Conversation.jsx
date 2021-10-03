@@ -10,8 +10,6 @@ function Conversation({title, comments, conversation, getConversation, forum}) {
         history.push('/forum')
     }
 
-    console.log('forum-conversation', forum)
-
     return (
         <div>
             <h3 onClick={getConversationData}>

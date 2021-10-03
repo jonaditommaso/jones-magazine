@@ -1,26 +1,30 @@
 import '../styles/knowImage/knowImage.css';
+import history from '../history';
+import { getNews } from '../actions';
+import { connect } from 'react-redux'
 
-const KnowImage = ({newImage, newTitle, cut}) => {
+const KnowImage = ({newImage, newTitle, content, description, getNews}) => {
 
-    // const title = () => {
-    //     if(newTitle.substring(0, cut).length > 110) {
-    //         const shortTitle = newTitle.substring(0, cut).substring(0, 110) + '...';
-    //         return shortTitle
-    //     }
-    //     else {
-    //         return newTitle.substring(0, cut);
-    //     }
-    // }
+    const handleGoToNew = () => {
+        getNews(newTitle, newImage, content, description);
+        history.push('/insidenews');
+    }
 
 
     return ( 
-        <div className="know__newsContainer">
+        <div className="know__newsContainer" onClick={handleGoToNew}>
             <div className="know__newsPhotos">
                 <img src={newImage} alt="new1" loading="lazy" />
             </div>
-            <figcaption className="know__title">{newTitle?.substring(0, cut)}</figcaption>
+            <figcaption className="know__title">{newTitle}</figcaption>
         </div>
     );
 }
  
-export default KnowImage;
+const mapStateToProps = (state) => {
+    return {
+        noticias: state.news
+    }
+}
+ 
+export default connect(mapStateToProps, {getNews})(KnowImage)

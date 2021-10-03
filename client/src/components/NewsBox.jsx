@@ -4,14 +4,12 @@ import '../styles/newsBox/newsBox.css';
 import { getNews } from '../actions';
 import history from "../history";
 
-const NewsBox = ({newImage, newTitle, cut, big, content, getNews, noticias, description}) => {
+const NewsBox = ({newImage, newTitle, cut, big, content, getNews, description}) => {
 
     const handleGoToNew = () => {
         getNews(newTitle, newImage, content, description);
         history.push('/insidenews');
     }
-
-     console.log(noticias)
 
     return ( 
         <div className="newsBox" onClick={handleGoToNew}>

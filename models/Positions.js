@@ -1,11 +1,11 @@
 const mongoose = require('mongoose');
-const {Schema} = mongoose;
+const {Schema, model} = mongoose;
 const ObjectId = Schema.Types.ObjectId;
 
-const model = module.exports;
+// const model = module.exports;
 
-// const footballSchema = new Schema({
-model.Football = mongoose.model('football', new Schema({
+const footballSchema = new Schema({
+// model.Football = mongoose.model('football', new Schema({
     _id: {type: ObjectId, required: true}, // otras propiedades, trim: para que no hayan espacios en blanco / 
     team: {type: String, required: true}, //unique, para que no se repita.
     shield: {type: String},
@@ -19,8 +19,8 @@ model.Football = mongoose.model('football', new Schema({
     dif: {type: Number},
     updated_at: {type: Date, default: Date.now} // o timestamps: true
 })
-);
-// module.exports = model('Football', footballSchema)
+
+module.exports = model('Positions', footballSchema)
 //el new Schema se puede asignar a una variable tipo const footballSchema
 //si importamos model junto con el Schema, podemos hacer..
 //module.exports = model('Football', footballSchema)

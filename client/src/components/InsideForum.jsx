@@ -13,10 +13,10 @@ const InsideForum = ({forum}) => {
                 <h4 style={{display: 'inline'}}>
                     { forum && forum.conversation.title }
                 </h4>
-                <p style={{fontWeight: '300', fontSize: '20px'}}>
+                <p style={{fontWeight: '300', fontSize: '22px'}}>
                     { forum && forum.conversation.description }
                 </p>
-                <div style={{width: '65%', margin: 'auto'}}>
+                <div style={{width: '68%', margin: 'auto'}}>
                      { forum && forum.conversation.content }
                 </div>
             </div>

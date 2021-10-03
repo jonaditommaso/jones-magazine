@@ -1,26 +1,14 @@
 import React, {  useState, useEffect } from 'react';
 import { useParams } from "react-router-dom";
 import '../styles/club/club.css';
-import NewsService from '../services/NewsService';
-import { NEWS_KEY } from '../utils/keys';
 import NewsBox from './NewsBox';
+import axios from 'axios';
 
 const Club = () => {
 
     const [clubColors, setClubColors] = useState('');
     const [team, setTeam] = useState('');
-    const [newsClub1, setNewsClub1] = useState('');
-    const [newsClub2, setNewsClub2] = useState('');
-    const [newsClub3, setNewsClub3] = useState('');
-    // const [newsClub4, setNewsClub4] = useState('');
-    // const [newsClub5, setNewsClub5] = useState('');
-    const [newsClubImage1, setNewsClubImage1] = useState('');
-    const [newsClubImage2, setNewsClubImage2] = useState('');
-    const [newsClubImage3, setNewsClubImage3] = useState('');
-
-    const [cutNews1, setCutNews1] = useState('');
-    const [cutNews2, setCutNews2] = useState('');
-    const [cutNews3, setCutNews3] = useState('');
+    const [newsClub, setNewsClub] = useState('');
 
     const [nationalCups, setNationalCups] = useState('');
     const [internationalCups, setInternationalCups] = useState('');
@@ -36,27 +24,8 @@ const Club = () => {
     useEffect(() => {
 
         const getNews = async () => {
-            const newService = new NewsService();
-            const {data} = await newService.getBusinessNews(`/top-headlines?q=${param === 'sanlorenzo' ? 'san lorenzo' : param}&country=ar&apiKey=${NEWS_KEY}&category=sports`);
-            const dataFiltered = data.articles.filter(haveImage => haveImage.urlToImage);
-            // console.log(data)
-            setNewsClub1(dataFiltered[0]?.title);
-            setNewsClub2(dataFiltered[1]?.title);
-            setNewsClub3(dataFiltered[2]?.title);
-
-            setNewsClubImage1(dataFiltered[0]?.urlToImage);
-            setNewsClubImage2(dataFiltered[1]?.urlToImage);
-            setNewsClubImage3(dataFiltered[2]?.urlToImage);
-
-            if (newsClub1?.lastIndexOf('-') > 0) {
-                setCutNews1(newsClub1.lastIndexOf('-'));
-            }
-            if (newsClub2?.lastIndexOf('-') > 0) {
-                setCutNews2(newsClub2.lastIndexOf('-'));
-            }
-            if (newsClub3?.lastIndexOf('-') > 0) {
-                setCutNews3(newsClub3?.lastIndexOf('-'));
-            }
+            const {data} = await axios.get(`http://localhost:5000/api/${param}`);
+            setNewsClub(data)
         }
         getNews()
         
@@ -111,7 +80,7 @@ const Club = () => {
             setMorePresences('Sergio Bísmark Villar - 446 partidos');
             setScorer('José Sanfilippo - 207 goles / Promedio: 0,78');
         }
-    }, [newsClub1, newsClub2, newsClub3]);
+    }, [newsClub]);
     
     const shield = () => {
         if(param === 'boca') {
@@ -141,38 +110,48 @@ const Club = () => {
                         {shield()}<h4>{team}</h4>
                     </div>
                 </div>
-                {/* <div>
-                    Titulos y partidos
-                </div> */}
                 <div className="club__principalNews">
                     <NewsBox 
-                        newImage={newsClubImage1} 
-                        newTitle={newsClub1} 
-                        cut={cutNews1}
+                        newImage={newsClub[0]?.urlToImage} 
+                        newTitle={newsClub[0]?.title} 
+                        description={newsClub[0]?.description}
+                        content={newsClub[0]?.content} 
                         big
                     />
                 </div>
                 <div className="club__secondaryNews">
-                    {newsClubImage2 
+                    {newsClub
                     ? 
                     <div className="club__secondaryNew">
                         <NewsBox 
-                            newImage={newsClubImage2} 
-                            newTitle={newsClub2} 
-                            cut={cutNews2}
+                            newImage={newsClub[1]?.urlToImage} 
+                            newTitle={newsClub[1]?.title}
+                            description={newsClub[1]?.description}
+                            content={newsClub[1]?.content} 
                         />
                     </div>
                     : <></>
                     }
-                    {newsClubImage3
+                    {newsClub
                     ?
+                    <>
                     <div className="club__secondaryNew">
                         <NewsBox 
-                            newImage={newsClubImage3} 
-                            newTitle={newsClub3}
-                            cut={cutNews3}
+                            newImage={newsClub[2]?.urlToImage} 
+                            newTitle={newsClub[2]?.title}
+                            description={newsClub[2]?.description}
+                            content={newsClub[2]?.content}
                         />
                     </div>
+                    <div className="club__secondaryNew">
+                        <NewsBox 
+                            newImage={newsClub[3]?.urlToImage} 
+                            newTitle={newsClub[3]?.title}
+                            description={newsClub[3]?.description}
+                            content={newsClub[3]?.content}
+                        />
+                    </div>
+                    </>
                     : <></>
                     }
                 </div>

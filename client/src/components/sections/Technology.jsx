@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react'
-import NewsService from '../../services/NewsService'
 import NewsBox from '../NewsBox'
-import { NEWS_KEY } from '../../utils/keys'
 import '../../styles/finance/finance.css'
+import axios from 'axios'
 
 function Technology() {
 
@@ -10,11 +9,9 @@ function Technology() {
 
     useEffect(() => {
         const getNews = async () => {
-            const newService = new NewsService();
-            const { data } = await newService.getTechnologyNews(`/top-headlines?country=ar&apiKey=${NEWS_KEY}&category=technology`)
-            const dataFiltered = data.articles.filter(haveImage => haveImage.urlToImage);
-            setTechnologyNews(dataFiltered);
-            localStorage.setItem('tech', JSON.stringify(dataFiltered));
+            const { data } = await axios.get('http://localhost:5000/api/technology')
+            setTechnologyNews(data)
+            localStorage.setItem('tech', JSON.stringify(data));
         }
         if(!localStorage.getItem('tech')) {
             getNews();
@@ -33,6 +30,7 @@ function Technology() {
                     newImage={technologyNews[1]?.urlToImage}
                     newTitle={technologyNews[1]?.title}
                     description={technologyNews[1]?.description}
+                    content={technologyNews[1]?.content}
                     big
                 />
             </div>
@@ -43,6 +41,7 @@ function Technology() {
                         newImage={technologyNews[2]?.urlToImage}
                         newTitle={technologyNews[2]?.title}
                         description={technologyNews[2]?.description}
+                        content={technologyNews[2]?.content}
                     />
                 </div>
                 <div className="finance__secondaryNew">
@@ -50,9 +49,17 @@ function Technology() {
                         newImage={technologyNews[3]?.urlToImage}
                         newTitle={technologyNews[3]?.title}
                         description={technologyNews[3]?.description}
+                        content={technologyNews[3]?.content}
                     />
                 </div>
-                
+                <div className="finance__secondaryNew">
+                    <NewsBox 
+                        newImage={technologyNews[0]?.urlToImage}
+                        newTitle={technologyNews[0]?.title}
+                        description={technologyNews[0]?.description}
+                        content={technologyNews[0]?.content}
+                    />
+                </div>
             </div>
         </div>
     )
