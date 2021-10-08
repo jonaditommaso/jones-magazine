@@ -5,4 +5,4 @@ export const NEWS_KEY = '3f9c41d50ff840f2858329d2b7cff8c2';
 export const STRIPE_KEY = 'pk_test_51IDW5HKJhSsvCfH2CMaLIzNCYTGnKdM7OKqX394bz7KNIRKUdaJwjJjZXZijqrCdVP7mqUyApxaJCHu62tAIMpTq00nR7grBtk';
 
 export const GOOGLE_CLIENT_ID = '21898492783-qp3ede16idukugkbdsdlaeau37ae93pf.apps.googleusercontent.com';
-export const GOOGLE_CLIENT_ID_SECRET = '53OKQyvwjJJzC-N0R91JjS62';
+export const GOOGLE_CLIENT_ID_SECRET = '53OKQyvwjJJzC-N0R91JjS62'; 

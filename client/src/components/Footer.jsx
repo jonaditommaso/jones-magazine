@@ -15,11 +15,15 @@ const Footer = () => {
 
             </div>
             <div className="footer__social">
-                {/* <div className="footer__icon">
-                    <LinkedInIcon fontSize="large" />
-                </div> */}
                 <div className="footer__icon">
-                    <InstagramIcon fontSize="large" />
+                    <a 
+                        href="https://www.instagram.com/magazinejones/"
+                        target='_blank' 
+                        rel="noopener noreferrer" 
+                        style={{display: 'inline-flex', cursor: 'pointer'}}
+                    >
+                        <InstagramIcon fontSize="large" />
+                    </a>
                 </div>
                 <div className="footer__icon">
                     <a 

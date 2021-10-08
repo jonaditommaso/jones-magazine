@@ -3,7 +3,6 @@ import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import '../styles/signUp/signUp.css';
 import TextError from './TextError';
-// import GoogleLogin from './GoogleLogin';
 import Swal from 'sweetalert2';
 import SignInWithGoogle from './SignInWithGoogle';
 import history from '../history';
@@ -41,20 +40,20 @@ const Login = () => {
 
     return ( 
         <>
-        <hr />
-        <div className="signUp__container">
-            <div className="login__title">
-                <h5>Iniciar sesión en tu cuenta de JONES</h5>
-                <p><i>¿No tienes una cuenta? <span className="login__span" onClick={() => history.push('/signup')}>¡Crea una!</span></i></p>
-            </div>
-            <div className="login__google">
-                <SignInWithGoogle/>
-            </div>
-            
-            <div className="horizontal__line">
-                <span>O</span>
-            </div>
-             <Formik
+            <hr />
+            <div className="signUp__container">
+                <div className="login__title">
+                    <h5>Iniciar sesión en tu cuenta de JONES</h5>
+                    <p><i>¿No tienes una cuenta? <span className="login__span" onClick={() => history.push('/signup')}>¡Crea una!</span></i></p>
+                </div>
+                <div className="login__google">
+                    <SignInWithGoogle/>
+                </div>
+                
+                <div className="horizontal__line">
+                    <span>O</span>
+                </div>
+                <Formik
                     initialValues={initialValues}
                     validationSchema={validationSchema}
                     onSubmit={onSubmit}
@@ -79,7 +78,6 @@ const Login = () => {
                                 name='password' 
                                 className="theInput"
                                 placeholder="Contraseña"
-                                // component={ShowPassword}
                             />
                             <ErrorMessage name='password' component={TextError} />
                         </div>
@@ -88,13 +86,12 @@ const Login = () => {
                         <p className="textLogin2"><i>You can unsubscribe from emails at any time. By signing up you are agreeing to our Terms of Use and Privacy Policy</i></p>
                     </Form>
                 </Formik>
-
-                
-        </div>
-        <br />
-        <br />
+                    
+            </div>
+            <br />
+            <br />
         </>
-     );
+    );
 }
  
 export default Login;

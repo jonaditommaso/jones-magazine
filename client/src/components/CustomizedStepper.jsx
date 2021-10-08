@@ -38,9 +38,9 @@ const ColorlibConnector = withStyles({
   },
   line: {
     height: 3, //--------------------> GROSOR DE LA LINEA
-    border: 0, // no afecta
+    border: 0, 
     backgroundColor: '#eaeaf0', // ---> COLOR DE LA LINEA
-    borderRadius: 1, // no afecta
+    borderRadius: 1
   },
 })(StepConnector);
 
@@ -110,7 +110,6 @@ const useStyles = makeStyles((theme) => ({
   },
   button: {
     marginRight: theme.spacing(1), // ----------> botones back next
-    // backgroundColor: '#0d6efd'
   },
   instructions: {
     marginTop: theme.spacing(5), // --------------> texto/instrucciones arriba de los botones
@@ -146,7 +145,6 @@ const CustomizedStepper = ({emptyBasket, alert, confirm}) => {
     }
   }, [confirm])
 
-// console.log(activeStep)
   const handleNext = () => {
     setActiveStep((prevActiveStep) => prevActiveStep + 1);
     if(activeStep === 0) {
@@ -197,13 +195,10 @@ const CustomizedStepper = ({emptyBasket, alert, confirm}) => {
       <div>
         {activeStep === steps.length ? ( // -----> si el paso actual es igual a la cantidad de pasos es porque se termino. y devuelve esto:
           <div> 
-            {/* puedo devolver esto o mejor un sweet alert */}
-            {/* <Typography className={classes.instructions}> 
+            {/* puedo devolver esto o mejor un sweet alert 
+             <Typography className={classes.instructions}> 
               Su compra fue realizada con exito !
-            </Typography>
-            <Button onClick={handleReset} className={classes.button}>
-              Regresar a la libreria
-            </Button> */}
+            </Typography> */}
             {purchaseMade()}
           </div>
         ) : (

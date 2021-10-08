@@ -24,7 +24,7 @@ const Club = () => {
     useEffect(() => {
 
         const getNews = async () => {
-            const {data} = await axios.get(`http://localhost:5000/api/${param}`);
+            const {data} = await axios.get(`https://jones-magazine.vercel.app/api/${param}`);
             setNewsClub(data)
         }
         getNews()

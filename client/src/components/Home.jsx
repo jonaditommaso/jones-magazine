@@ -18,7 +18,7 @@ const Home = () => {
 
             // const dataFiltered = data.articles.filter(haveImage => haveImage.urlToImage);
             // setNews(dataFiltered);
-            const { data } = await axios.get('http://localhost:5000/api/generalNews');
+            const { data } = await axios.get('https://jones-magazine.vercel.app/api/generalNews');
             setNews(data)
             localStorage.setItem('data', JSON.stringify(data));
         }
@@ -32,6 +32,8 @@ const Home = () => {
         }
         
     }, [news]);
+
+    const YOU_KNOW = `<<  DEBERIAS SABER  >>`
 
 
     return ( 
@@ -47,7 +49,7 @@ const Home = () => {
                     newImage={news[0]?.urlToImage}
                     newTitle={news[0]?.title}
                     content={news[0]?.content}
-                    description={news[0].description}
+                    description={news[0]?.description}
                     big
                   />
                 </div> 
@@ -58,7 +60,7 @@ const Home = () => {
                             newImage={news[1]?.urlToImage}
                             newTitle={news[1]?.title}
                             content={news[1]?.content}
-                            description={news[1].description}
+                            description={news[1]?.description}
                         />
                     </div>
                     <div className="new__aside">
@@ -66,7 +68,7 @@ const Home = () => {
                             newImage={news[2]?.urlToImage}
                             newTitle={news[2]?.title}
                             content={news[2]?.content}
-                            description={news[2].description}
+                            description={news[2]?.description}
                         />
                     </div>
                 </div>
@@ -75,7 +77,7 @@ const Home = () => {
 
             <div className="home__news">
                 <div className="news__title">
-                    <h4>DEBERIAS SABER</h4>
+                    <h4>{YOU_KNOW}</h4>
                     <hr />
                 </div>
                 

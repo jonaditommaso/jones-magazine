@@ -59,8 +59,10 @@
 .book__name {
   margin-top: 2px;
   margin-bottom: 0;
-  font-weight: 650;
+  font-weight: 700;
+  font-size: 20px;
   text-align: center;
+  font-family: "Zilla Slab", Lora, georgia, times, serif;
 }
 
 .book__name:hover {
@@ -70,11 +72,16 @@
 
 .book__author {
   margin: 0;
+  margin-top: 7px;
+  font-family: "Zilla Slab", Lora, georgia, times, serif;
 }
 
 .book__price {
   margin: 3%;
   color: #0D6EFD;
+  font-family: "Roboto Condensed", "Arial Narrow", arial, sans-serif;
+  font-style: italic;
+  font-size: 20px;
 }
 
 .book__button {
@@ -82,10 +89,13 @@
   color: white;
   background-color: #0D6EFD;
   border: none;
-  border-radius: 8px;
+  border-radius: 3px;
   padding: 5px;
   -webkit-transition: 0.4s;
   transition: 0.4s;
+  font-weight: 400;
+  font-size: 17px;
+  font-family: "Roboto Condensed", "Arial Narrow", arial, sans-serif;
 }
 
 .book__button:hover {

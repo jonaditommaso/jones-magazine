@@ -10,7 +10,6 @@
   padding: 5%;
   cursor: pointer;
   color: black;
-  font-weight: 400;
   hover-color: #0D6EFD;
 }
 
@@ -28,6 +27,9 @@
 .navBar__center {
   margin: auto;
   margin-right: 200px;
+  font-size: 20px;
+  font-weight: 300;
+  font-family: "Roboto Condensed", "Arial Narrow", arial, sans-serif;
 }
 
 .navBar__right {

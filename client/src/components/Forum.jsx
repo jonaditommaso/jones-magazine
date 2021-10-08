@@ -25,13 +25,13 @@ function Forum() {
     }, [callGetConversation, conversations]);
 
     const getConversation = async () => {
-        const response = await axios.get('http://localhost:5000/api/conversation')
+        const response = await axios.get('https://jones-magazine.vercel.app/api/conversation')
         setConversations(response.data)
     }
 
     const createConversation = async () => {
         setShowForm(false)
-         await axios.post('http://localhost:5000/api/conversation', 
+         await axios.post('https://jones-magazine.vercel.app/api/conversation', 
         {title, description, content});
         setCallGetConversation(true);
     }

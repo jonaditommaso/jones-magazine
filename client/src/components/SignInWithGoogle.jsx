@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { GOOGLE_CLIENT_ID } from '../utils/keys';
-// import GoogleLogin from 'react-google-login';
 import { connect } from 'react-redux';
 import { signInGoogle, signOutGoogle } from '../actions';
 import GoogleButton from 'react-google-button';
@@ -30,7 +29,6 @@ const SignInWithGoogle = ({isSignedIn, signInGoogle, signOutGoogle}) => {
             
     }, [auth]);
 
-    // console.log(auth);
 
     const onAuthChange = (isSignedIn) => {
         if(isSignedIn) {

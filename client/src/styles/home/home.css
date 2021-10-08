@@ -20,6 +20,10 @@
   display: flex;
 }
 
+.navBar__link {
+  font-family: "Roboto Condensed", "Arial Narrow", arial, sans-serif;
+}
+
 .home__aside {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -40,6 +44,7 @@
 
 .news__title > h4 {
   font-weight: 350;
+  font-family: "Roboto Condensed", "Arial Narrow", arial, sans-serif;
 }
 
 .home__news {
@@ -117,6 +122,9 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+  .quote {
+    margin-top: 0%;
   }
   .home__aside {
     width: 82%;

@@ -9,7 +9,7 @@ function Science() {
 
     useEffect(() => {
         const getNews = async () => {
-            const { data } = await axios.get('http://localhost:5000/api/science');
+            const { data } = await axios.get('https://jones-magazine.vercel.app/api/science');
             setScienceNews(data)
             localStorage.setItem('science', JSON.stringify(scienceNews));
         }

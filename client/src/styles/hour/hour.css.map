@@ -1,6 +1,6 @@
 {
     "version": 3,
-    "mappings": "AAAA,AAAA,KAAK,CAAC;EACF,SAAS,EAAE,IAAI;CAAG",
+    "mappings": "AAAA,AAAA,KAAK,CAAC;EACF,SAAS,EAAE,MAAM;EACjB,WAAW,EAAE,qDAAqD;CAAG",
     "sources": [
         "hour.sass"
     ],

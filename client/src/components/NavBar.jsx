@@ -1,11 +1,12 @@
 import React, { useState, useRef, useEffect } from 'react';
-import SearchIcon from '@material-ui/icons/Search';
-import MenuIcon from '@material-ui/icons/Menu';
 import CloseIcon from '@material-ui/icons/Close';
 import { Link } from 'react-router-dom';
 import '../styles/navBar/navBar.css';
 import Sidebar from './Sidebar';
 import Swal from 'sweetalert2';
+import { IoIosMenu } from 'react-icons/io';
+import { IoSearchOutline } from 'react-icons/io5';
+import { AiOutlineClose } from 'react-icons/ai'
 
 function NavBar() {
 
@@ -40,7 +41,6 @@ function NavBar() {
             // const getNews = async () => {
             //     const newService = new NewsService();
             //     const {data} = await newService.getCovidNews(`/top-headlines?q=${searchingNews}&country=ar&apiKey=${NEWS_KEY}`);
-            //     console.log(data);
             // }
             // getNews()
             Swal.fire({
@@ -59,7 +59,7 @@ function NavBar() {
         <div className="theNavBar">
             
             <div className="navBar__left">
-                {isOpen ? <CloseIcon onClick={() => clicked()} /> : <MenuIcon onClick={() => clicked()} />}
+                {isOpen ? <AiOutlineClose size={25} onClick={() => clicked()} /> : <IoIosMenu size={28} onClick={() => clicked()} />}
                 
                 <Sidebar open={setIsOpen} isClicked={handleSidebar} />
             </div>
@@ -86,7 +86,7 @@ function NavBar() {
                     onChange={e => setSearchingNews(e.target.value)}
                 />
                 {inputNavBar === 'ocultar' 
-                ? <SearchIcon onClick={() => showInput()} />
+                ? <IoSearchOutline size={25} onClick={() => showInput()} />
                 : <CloseIcon onClick={() => hideInput()} />}
             </div>
         </div>

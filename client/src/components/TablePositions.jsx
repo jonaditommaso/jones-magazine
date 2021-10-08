@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import '../styles/table/table.css';
 import Table from 'react-bootstrap/Table';
-// import {teamsData} from '../utils/teamsData'; 
 import axios from 'axios';
 
 const TablePositions = () => {
@@ -10,7 +9,7 @@ const TablePositions = () => {
 
     useEffect(() => {
         const getTeams = async() => {
-            const {data} = await axios.get('http://localhost:5000/api/positionsData');
+            const {data} = await axios.get('https://jones-magazine.vercel.app/api/positionsData');
             
             setTeamsData(data?.sort((a, b) => {
                 if( b.pts === a.pts ){
@@ -23,12 +22,6 @@ const TablePositions = () => {
             getTeams();
         }
     }, [teamsData]);
-
-//    const teams = teamsData?.sort((a, b) => {
-//        //if b.pts = a.pts ...
-//         return b.pts - a.pts
-//     })
-    // console.log('mapeado', teamsData?.forEach(team => team))
 
     return ( 
         <div className="table">

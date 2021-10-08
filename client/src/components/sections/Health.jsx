@@ -9,14 +9,9 @@ function Health() {
 
     useEffect(() => {
         const getNews = async () => {
-            // const newService = new NewsService();
-            // const { data } = await newService.getHealthNews(`/top-headlines?country=ar&apiKey=${NEWS_KEY}&category=health`)
-            // const dataFiltered = data.articles.filter(haveImage => haveImage.urlToImage);
-            // setHealthNews(dataFiltered);
-            // console.log(dataFiltered)
-            const {data} = await axios.get('http://localhost:5000/api/health')
+            const {data} = await axios.get('https://jones-magazine.vercel.app/api/health')
             setHealthNews(data)
-            // localStorage.setItem('health', JSON.stringify(dataFiltered));
+            localStorage.setItem('health', JSON.stringify(data));
         }
         if(!localStorage.getItem('health')) {
             getNews();
@@ -70,4 +65,4 @@ function Health() {
     )
 }
 
-export default Health
+export default Health;

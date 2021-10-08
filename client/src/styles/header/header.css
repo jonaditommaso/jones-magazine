@@ -51,9 +51,19 @@
 .header__link > Button {
   margin: 1%;
   text-decoration: none;
+  font-family: "Roboto Condensed", "Arial Narrow", arial, sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.header__name > h6 {
+  font-family: "Roboto Condensed", "Arial Narrow", arial, sans-serif;
+  font-weight: 700;
+  font-size: 18px;
 }
 
 .exitIcon {
+  display: inline;
   margin-right: 40px;
   color: black;
 }

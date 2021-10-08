@@ -6,15 +6,12 @@ import axios from 'axios';
 
 const Finance = () => {
 
-    // const [newsOne, setNewsOne] = useState('');
-    // const [imageOne, setImageOne] = useState('');
     const [financeNews, setFinanceNews] = useState('');
-
     const [foreignExchange, setForeignExchange] = useState('');
 
     useEffect(() => {
         const getNews = async () => {
-            const {data} = await axios.get('http://localhost:5000/api/finance');
+            const {data} = await axios.get('https://jones-magazine.vercel.app/api/finance');
             setFinanceNews(data)
 
             const getForeignExchange = async () => {
@@ -37,12 +34,6 @@ const Finance = () => {
             thereAreForeignExchange();
         }
         getNews();
-
-        // const getForeignExchangePrice = async () => {
-        //     const response = await dolarPriceApi.get('');
-        //     console.log('dolar', response)
-        // }
-        // getForeignExchangePrice();
     }, []);
 
     return ( 

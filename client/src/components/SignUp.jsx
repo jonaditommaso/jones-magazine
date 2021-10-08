@@ -47,9 +47,9 @@ function SignUp() {
 
     return (
         <>
-        <hr />
-        <div className="signUp__container">
-             <Formik
+            <hr />
+            <div className="signUp__container">
+                <Formik
                     initialValues={initialValues}
                     validationSchema={validationSchema}
                     onSubmit={onSubmit}
@@ -91,10 +91,10 @@ function SignUp() {
                         <button type='submit' className="submitButton" onClick={notice}>Registrarse</button>
                     </Form>
                 </Formik>
-            
-        </div>
-        <br />
-        <br />
+                
+            </div>
+            <br />
+            <br />
         </>
     );
 }
