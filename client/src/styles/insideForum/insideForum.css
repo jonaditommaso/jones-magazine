@@ -1,0 +1,9 @@
+.insideForum {
+  font-family: "Zilla Slab", Lora, georgia, times, serif;
+}
+
+.insideForum > h4 {
+  font-weight: 600;
+  font-size: 35px;
+}
+/*# sourceMappingURL=insideForum.css.map */

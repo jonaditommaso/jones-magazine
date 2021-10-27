@@ -20,7 +20,9 @@ import Health from './components/sections/Health';
 import { Elements } from '@stripe/react-stripe-js';
 import { stripePromise } from './utils/stripePromise';
 import ScrollToTopWhenNavigating from './utils/ScrollToTopWhenNavigating';
-
+import AboutUs from './components/sections/AboutUs';
+import JoinUs from './components/sections/JoinUs';
+import NotFound from './utils/NotFound';
 
 function App() {
   return (
@@ -46,6 +48,9 @@ function App() {
           <Route path='/technology' exact component={Technology}/>
           <Route path='/health' exact component={Health}/>
           <Route path='/forum' exact component={InsideForum} />
+          <Route path='/aboutus' exact component={AboutUs} />
+          <Route path='/joinus' exact component={JoinUs} />
+          <Route component={NotFound} />
         </Switch>
         <Footer />
       </div>

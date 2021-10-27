@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,YAAY,CAAC;EACT,WAAW,EAAE,yCAAyC;CAG9B;;AAJ5B,AAEI,YAFQ,GAEN,EAAE,CAAC;EACD,WAAW,EAAE,GAAG;EAChB,SAAS,EAAE,IAAI;CAAG",
+    "sources": [
+        "insideForum.sass"
+    ],
+    "names": [],
+    "file": "insideForum.css"
+}

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Button, Form } from 'react-bootstrap';
 import { connect } from 'react-redux'
+import '../styles/insideForum/insideForum.css'
 
 const InsideForum = ({forum}) => {
 
@@ -9,7 +10,7 @@ const InsideForum = ({forum}) => {
     return ( 
         <>
             <hr />
-            <div>
+            <div className="insideForum">
                 <h4 style={{display: 'inline'}}>
                     { forum && forum.conversation.title }
                 </h4>

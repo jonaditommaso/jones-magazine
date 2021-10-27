@@ -57,10 +57,10 @@ const Finance = () => {
 
             <div className="finance__principal">
                 <NewsBox 
-                    newImage={financeNews[1]?.urlToImage}
-                    newTitle={financeNews[1]?.title}
-                    description={financeNews[1]?.description}
-                    content={financeNews[1]?.content}
+                    newImage={financeNews[0]?.urlToImage}
+                    newTitle={financeNews[0]?.title}
+                    description={financeNews[0]?.description}
+                    content={financeNews[0]?.content}
                     big
                 />
             </div>
@@ -68,10 +68,10 @@ const Finance = () => {
             <div className="finance__secondaryNews">
                 <div className="finance__secondaryNew">
                     <NewsBox 
-                        newImage={financeNews[0]?.urlToImage}
-                        newTitle={financeNews[0]?.title}
-                        description={financeNews[0]?.description}
-                        content={financeNews[0]?.content}
+                        newImage={financeNews[1]?.urlToImage}
+                        newTitle={financeNews[1]?.title}
+                        description={financeNews[1]?.description}
+                        content={financeNews[1]?.content}
                     />
                 </div>
                 <div className="finance__secondaryNew">

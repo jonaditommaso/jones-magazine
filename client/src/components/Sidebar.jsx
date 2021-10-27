@@ -50,7 +50,7 @@ const Sidebar = ({open, isClicked}) => {
                                         >
 
                                             <div style={{display: 'flex'}}>
-                                                <div className="sidebar__item" /*onClick={!subItem && handleGo}*/>
+                                                <div className="sidebar__item">
                                                     {item.title}
                                                 </div>
                                                 <div className="sidebar__arrow">
