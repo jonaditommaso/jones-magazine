@@ -146,9 +146,9 @@ const Home = () => {
                 </div>
             </div>
 
-            <hr style={{width: '70%', margin: 'auto'}} />
+            {/* <hr style={{width: '70%', margin: 'auto'}} /> */}
 
-            <div className="home__quote">
+            {/* <div className="home__quote">
                 <p className="quote">
                     <i>"Las metas no se compran en una tienda, sino que nacen de nuestra pasión, de la incomodidad interna, de nuestra inconformidad y de la necesidad de progresar. 
                         <br />
@@ -164,7 +164,7 @@ const Home = () => {
                         style={{width: '140px', height: '220px', display: 'inline-flex'}}
                     />
                 </div>
-            </div>
+            </div> */}
             </>
             : 
             <div className="home__loading">

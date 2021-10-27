@@ -12,23 +12,6 @@
   font-weight: 550;
 }
 
-.finance__principal {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.finance__secondaryNews {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  padding: 30px;
-}
-
-.finance__secondaryNew {
-  padding: 50px;
-}
-
 @media (max-width: 500px) {
   .finance__secondaryNews {
     -webkit-box-orient: vertical;

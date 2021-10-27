@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import '../styles/finance/finance.css';
 import NewsService from '../services/NewsService';
-import NewsBox from './NewsBox';
 import axios from 'axios';
+import NewsBoxContainer from '../utils/NewsBoxContainer';
 
 const Finance = () => {
 
@@ -55,42 +55,7 @@ const Finance = () => {
 
             <hr style={{width: '80%', margin: 'auto', marginBottom:'2%', marginTop: '1%'}}/>
 
-            <div className="finance__principal">
-                <NewsBox 
-                    newImage={financeNews[0]?.urlToImage}
-                    newTitle={financeNews[0]?.title}
-                    description={financeNews[0]?.description}
-                    content={financeNews[0]?.content}
-                    big
-                />
-            </div>
-
-            <div className="finance__secondaryNews">
-                <div className="finance__secondaryNew">
-                    <NewsBox 
-                        newImage={financeNews[1]?.urlToImage}
-                        newTitle={financeNews[1]?.title}
-                        description={financeNews[1]?.description}
-                        content={financeNews[1]?.content}
-                    />
-                </div>
-                <div className="finance__secondaryNew">
-                    <NewsBox 
-                        newImage={financeNews[2]?.urlToImage}
-                        newTitle={financeNews[2]?.title}
-                        description={financeNews[2]?.description}
-                        content={financeNews[2]?.content}
-                    />
-                </div>
-                <div className="finance__secondaryNew">
-                    <NewsBox 
-                        newImage={financeNews[3]?.urlToImage}
-                        newTitle={financeNews[3]?.title}
-                        description={financeNews[3]?.description}
-                        content={financeNews[3]?.content}
-                    />
-                </div>
-            </div>
+            <NewsBoxContainer section={financeNews} />
         </div>
     );
 }

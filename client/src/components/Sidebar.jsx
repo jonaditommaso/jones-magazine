@@ -45,7 +45,7 @@ const Sidebar = ({open, isClicked}) => {
                                     <div className="sidebar__itemLink">
                                         <Link
                                             to={item.path} 
-                                            onClick={item.subItem && (()=> showSubItem(index))}
+                                            onClick={item.subItem ? (()=> showSubItem(index)): ()=> handleGo()}
                                             style={{textDecoration: 'none'}}
                                         >
 

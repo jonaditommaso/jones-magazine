@@ -45,6 +45,23 @@
   cursor: pointer;
 }
 
+.container__main {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.container__secondary {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  padding: 30px;
+}
+
+.secondary {
+  padding: 50px;
+}
+
 @media (max-width: 500px) {
   .bigBox {
     height: 185px;

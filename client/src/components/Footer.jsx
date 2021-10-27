@@ -3,6 +3,7 @@ import InstagramIcon from '@material-ui/icons/Instagram';
 import TwitterIcon from '@material-ui/icons/Twitter';
 import PinterestIcon from '@material-ui/icons/Pinterest';
 import { Link } from 'react-router-dom';
+import FooterIcon from '../utils/FooterIcon';
 
 const Footer = () => {
     return (
@@ -15,35 +16,15 @@ const Footer = () => {
 
             </div>
             <div className="footer__social">
-                <div className="footer__icon">
-                    <a 
-                        href="https://www.instagram.com/magazinejones/"
-                        target='_blank' 
-                        rel="noopener noreferrer" 
-                        style={{display: 'inline-flex', cursor: 'pointer'}}
-                    >
+                    <FooterIcon  href="https://www.instagram.com/magazinejones/">
                         <InstagramIcon fontSize="large" />
-                    </a>
-                </div>
-                <div className="footer__icon">
-                    <a 
-                    href="https://twitter.com/revistajones" 
-                    target='_blank' 
-                    rel="noopener noreferrer" 
-                    style={{display: 'inline-flex', cursor: 'pointer'}}
-                    >
+                    </FooterIcon>
+                    <FooterIcon href="https://twitter.com/revistajones">
                         <TwitterIcon fontSize="large" />
-                    </a>  
-                </div>
-                <div className="footer__icon">
-                    <a 
-                    href="https://ar.pinterest.com/revistajones/_saved/"  
-                    target='_blank' rel="noopener noreferrer" 
-                    style={{display: 'inline-flex', cursor: 'pointer'}}
-                    >
+                    </FooterIcon>  
+                    <FooterIcon href="https://ar.pinterest.com/revistajones/_saved/">
                         <PinterestIcon fontSize="large" />
-                    </a>
-                </div>
+                    </FooterIcon>
             </div>
             <hr />
             <p className="footer__terms">

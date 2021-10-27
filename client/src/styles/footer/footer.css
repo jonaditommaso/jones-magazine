@@ -1,5 +1,5 @@
 .footer__terms {
-  width: 60%;
+  width: 80%;
   margin: auto;
   margin-bottom: 1%;
 }
@@ -17,16 +17,9 @@
           justify-content: center;
 }
 
-.footer__icon {
-  padding: 1.5%;
-}
-
-.footer__icon > a {
+.footer__social > a {
   color: black;
   text-decoration: none;
-}
-
-.footer__icon:hover {
-  cursor: pointer;
+  padding: 15px;
 }
 /*# sourceMappingURL=footer.css.map */
