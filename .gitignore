@@ -9,7 +9,7 @@
 ### CLIENTE ###
 
 /build
-/client/src/utils/keys.js
+/client/src/utils/key.js
 /client/node_modules
 
 # production

@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import { WEATHER_KEY } from '../utils/keys';
+import { WEATHER_KEY } from '../utils/key';
 import axios from 'axios';
 import '../styles/weather/weather.css'
 import {PuffLoader} from "react-spinners";

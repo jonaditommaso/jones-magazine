@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import StripeCheckout from 'react-stripe-checkout';
-import { STRIPE_KEY } from '../utils/keys';
+import { STRIPE_KEY } from '../utils/key';
 import '../styles/checkout/checkout.css';
 import { Button } from 'react-bootstrap';
 import {CopyToClipboard} from 'react-copy-to-clipboard';

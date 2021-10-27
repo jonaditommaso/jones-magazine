@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { GOOGLE_CLIENT_ID } from '../utils/keys';
+import { GOOGLE_CLIENT_ID } from '../utils/key';
 import { connect } from 'react-redux';
 import { signInGoogle, signOutGoogle } from '../actions';
 import GoogleButton from 'react-google-button';
