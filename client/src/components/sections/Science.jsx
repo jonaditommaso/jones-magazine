@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import '../../styles/finance/finance.css';
-import axios from 'axios';
 import NewsBoxContainer from '../../utils/NewsBoxContainer';
+import NewsService from '../../services/NewsService';
 
 function Science() {
 
@@ -9,7 +9,8 @@ function Science() {
 
     useEffect(() => {
         const getNews = async () => {
-            const { data } = await axios.get('https://jones-magazine.vercel.app/api/science');
+            const newService = new NewsService();
+            const {data} = await newService.getNews('/science');
             setScienceNews(data);
             localStorage.setItem('science', JSON.stringify(data));
         }

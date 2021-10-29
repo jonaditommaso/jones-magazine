@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import '../styles/futbol/futbol.css';
-import axios from 'axios';
 import TablePositions from './TablePositions';
 import Forum from './Forum';
 import NewsBox from './NewsBox';
 import GoTopButton from '../utils/GoTopButton';
 import TeamAccessLink from '../utils/TeamAccessLink';
+import NewsService from '../services/NewsService';
 
 function Futbol() {
 
@@ -13,8 +13,9 @@ function Futbol() {
 
     useEffect(() => {
         const getNews = async () => {
-            const {data} = await axios.get('https://jones-magazine.vercel.app/api/futbolNews');
-            setFutbolNews(data)
+            const newService = new NewsService();
+            const {data} = await newService.getNews('/futbolNews');
+            setFutbolNews(data);
         }
         getNews();
 
@@ -62,7 +63,7 @@ function Futbol() {
         </div>
         <GoTopButton />
         </>
-    )
+    );
 }
 
 export default Futbol;

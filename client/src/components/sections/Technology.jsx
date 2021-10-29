@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import '../../styles/finance/finance.css';
-import axios from 'axios';
 import NewsBoxContainer from '../../utils/NewsBoxContainer';
+import NewsService from '../../services/NewsService';
 
 function Technology() {
 
@@ -9,7 +9,8 @@ function Technology() {
 
     useEffect(() => {
         const getNews = async () => {
-            const { data } = await axios.get('https://jones-magazine.vercel.app/api/technology');
+            const newService = new NewsService();
+            const {data} = await newService.getNews('/technology');
             setTechnologyNews(data);
             localStorage.setItem('tech', JSON.stringify(data));
         }

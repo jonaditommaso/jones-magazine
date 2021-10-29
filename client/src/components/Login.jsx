@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import '../styles/signUp/signUp.css';
-import TextError from './TextError';
+import TextError from '../utils/TextError';
 import Swal from 'sweetalert2';
 import SignInWithGoogle from './SignInWithGoogle';
 import history from '../history';

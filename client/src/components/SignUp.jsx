@@ -4,7 +4,7 @@ import * as Yup from 'yup';
 import '../styles/signUp/signUp.css';
 import Swal from 'sweetalert2';
 import history from '../history';
-import TextError from './TextError';
+import TextError from '../utils/TextError';
 
 function SignUp() {
 

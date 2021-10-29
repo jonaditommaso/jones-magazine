@@ -5,8 +5,8 @@ import NewsBox from './NewsBox';
 import KnowImage from '../utils/KnowImage';
 import BookImage from '../utils/BookImage';
 import {PuffLoader} from "react-spinners";
-import axios from 'axios';
 import { booksData } from '../utils/booksData';
+import NewsService from '../services/NewsService';
 
 const Home = () => {
     
@@ -15,12 +15,8 @@ const Home = () => {
 
     useEffect(() => {
         const getNews = async () => {
-            // const newService = new NewsService();
-            // const {data} = await newService.getBusinessNews(`/top-headlines?country=ar&apiKey=${NEWS_KEY}&category=business`);
-
-            // const dataFiltered = data.articles.filter(haveImage => haveImage.urlToImage);
-            // setNews(dataFiltered);
-            const { data } = await axios.get('https://jones-magazine.vercel.app/api/generalNews');
+            const newService = new NewsService();
+            const {data} = await newService.getNews('/generalNews');
             setNews(data)
             localStorage.setItem('data', JSON.stringify(data));
         }

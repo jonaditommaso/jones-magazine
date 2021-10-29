@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import '../styles/finance/finance.css';
 import NewsService from '../services/NewsService';
-import axios from 'axios';
 import NewsBoxContainer from '../utils/NewsBoxContainer';
 
 const Finance = () => {
@@ -11,7 +10,8 @@ const Finance = () => {
 
     useEffect(() => {
         const getNews = async () => {
-            const {data} = await axios.get('https://jones-magazine.vercel.app/api/finance');
+            const newService = new NewsService();
+            const {data} = await newService.getNews('/finance');
             setFinanceNews(data)
 
             const getForeignExchange = async () => {
