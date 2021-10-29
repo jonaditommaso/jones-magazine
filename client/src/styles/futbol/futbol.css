@@ -25,6 +25,8 @@
   cursor: pointer;
   -webkit-transition: 0.4s;
   transition: 0.4s;
+  height: 50px;
+  width: 50px;
 }
 
 .futbol__teams > img:hover {

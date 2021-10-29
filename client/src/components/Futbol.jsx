@@ -4,8 +4,8 @@ import axios from 'axios';
 import TablePositions from './TablePositions';
 import Forum from './Forum';
 import NewsBox from './NewsBox';
-import { Link } from 'react-router-dom';
 import GoTopButton from '../utils/GoTopButton';
+import TeamAccessLink from '../utils/TeamAccessLink';
 
 function Futbol() {
 
@@ -26,50 +26,30 @@ function Futbol() {
             <hr />
             
             <div className="futbol__news">
-                <div className="futbol__newsContainer">
+
+            { futbolNews && futbolNews.map(futbol => (
+                <div className="futbol__newsContainer" key={futbol?.title}>
                     <NewsBox
-                        newImage={futbolNews[0]?.urlToImage}
-                        newTitle={futbolNews[0]?.title}
-                        description={futbolNews[0]?.description}
-                        content={futbolNews[0]?.content}
+                        newImage={futbol?.urlToImage}
+                        newTitle={futbol?.title}
+                        content={futbol?.content}
+                        description={futbol?.description}
                     />
                 </div>
-                <div className="futbol__newsContainer">
-                    <NewsBox
-                        newImage={futbolNews[1]?.urlToImage}
-                        newTitle={futbolNews[1]?.title}
-                        description={futbolNews[1]?.description}
-                        content={futbolNews[1]?.content}
-                    />
-                </div>
-                <div className="futbol__newsContainer">
-                    <NewsBox
-                        newImage={futbolNews[2]?.urlToImage}
-                        newTitle={futbolNews[2]?.title}
-                        description={futbolNews[2]?.description}
-                        content={futbolNews[2]?.content}
-                    />
-                </div>
-                <div className="futbol__newsContainer">
-                    <NewsBox
-                        newImage={futbolNews[3]?.urlToImage}
-                        newTitle={futbolNews[3]?.title}
-                        description={futbolNews[3]?.description}
-                        content={futbolNews[3]?.content}
-                    />
-                </div>
+                )) }
 
             </div>
 
             <hr />
 
-            <div >
-                <Link className="futbol__teams" to="/club/boca"><img style={{height: '50px', width: '50px'}} src="/assets/img/futbol-icons/boca-big.png" alt="boca"/></Link>
-                <Link className="futbol__teams" to="/club/river"><img style={{height: '50px', width: '50px'}} src="/assets/img/futbol-icons/river-big.png" alt="river"/></Link>
-                <Link className="futbol__teams" to="/club/independiente"><img style={{height: '50px', width: '50px'}} src="/assets/img/futbol-icons/independiente-big.png" alt="independiente"/></Link>
-                <Link className="futbol__teams" to="/club/racing"><img style={{height: '50px', width: '50px'}} src="/assets/img/futbol-icons/racing-big.png" alt="racing"/></Link>
-                <Link className="futbol__teams" to="/club/sanlorenzo"><img style={{height: '50px', width: '50px'}} src="/assets/img/futbol-icons/sanlorenzo-big.png" alt="sanlorenzo"/></Link>
+            <div>
+                <TeamAccessLink team='boca' />
+                <TeamAccessLink team='river' />
+                <TeamAccessLink team='independiente' />
+                <TeamAccessLink team='racing' />
+                <TeamAccessLink team='sanlorenzo' />
             </div>
+
             <div className="futbol__content">
                 <div className="futbol__positions">
                     <TablePositions />

@@ -1,7 +1,7 @@
 import '../styles/knowImage/knowImage.css';
 import history from '../history';
 import { getNews } from '../actions';
-import { connect } from 'react-redux'
+import { connect } from 'react-redux';
 
 const KnowImage = ({newImage, newTitle, content, description, getNews}) => {
 
@@ -13,9 +13,7 @@ const KnowImage = ({newImage, newTitle, content, description, getNews}) => {
 
     return ( 
         <div className="know__newsContainer" onClick={handleGoToNew}>
-            <div className="know__newsPhotos">
-                <img src={newImage} alt="new1" loading="lazy" />
-            </div>
+            <img src={newImage} alt="new1" loading="lazy" />
             <figcaption className="know__title">{newTitle}</figcaption>
         </div>
     );
@@ -27,4 +25,4 @@ const mapStateToProps = (state) => {
     }
 }
  
-export default connect(mapStateToProps, {getNews})(KnowImage)
+export default connect(mapStateToProps, {getNews})(KnowImage);

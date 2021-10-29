@@ -6,10 +6,12 @@ import KnowImage from '../utils/KnowImage';
 import BookImage from '../utils/BookImage';
 import {PuffLoader} from "react-spinners";
 import axios from 'axios';
+import { booksData } from '../utils/booksData';
 
 const Home = () => {
     
     const [news, setNews] = useState('');
+    const [booksHome, setBooksHome] = useState('')
 
     useEffect(() => {
         const getNews = async () => {
@@ -30,6 +32,9 @@ const Home = () => {
         if(localStorage.getItem('data') && !news) {
             setNews(JSON.parse(localStorage.getItem('data')))
         }
+
+        const featuredBooks = booksData.filter(featured => featured.featured === true);
+        setBooksHome(featuredBooks);
         
     }, [news]);
 
@@ -83,38 +88,21 @@ const Home = () => {
                 
                 <div className="home__container">
                     <div className="home__containerChild">
-                        <div className="home__containerEveryKnow">
-                            <KnowImage 
-                                newImage={news[3]?.urlToImage}
-                                newTitle={news[3]?.title}
-                                content={news[3]?.content}
-                                description={news[3]?.description}
-                            />
-                        </div>
-                        <div className="home__containerEveryKnow">
-                            <KnowImage 
-                                newImage={news[4]?.urlToImage}
-                                newTitle={news[4]?.title}
-                                description={news[4]?.description}
-                                content={news[4]?.content}
-                            />
-                        </div>
-                        <div className="home__containerEveryKnow">
-                            <KnowImage 
-                                newImage={news[5]?.urlToImage}
-                                newTitle={news[5]?.title}
-                                description={news[5]?.description}
-                                content={news[5]?.content}
-                            />
-                        </div>
-                        <div className="home__containerEveryKnow">
-                            <KnowImage 
-                                newImage={news[6]?.urlToImage}
-                                newTitle={news[6]?.title}
-                                description={news[6]?.description}
-                                content={news[6]?.content}
-                            />
-                        </div>
+                        { news && news.map((knowNews, i) => {
+                            if(i > 2 && i < 7) {
+                                return (
+                                    <div key={knowNews?.title}>
+                                        <KnowImage
+                                            newImage={knowNews?.urlToImage}
+                                            newTitle={knowNews?.title}
+                                            content={knowNews?.content}
+                                            description={knowNews?.description}
+                                        />
+                                    </div>
+                                );
+                            }
+                            return <></>
+                        }) }
                     </div>
                     
                 </div>
@@ -124,54 +112,23 @@ const Home = () => {
                 <div>
                     <h4><Link className="navBar__link" to='/library'>VISITA NUESTRA TIENDA</Link></h4>
                 </div>
-                <div className="featuredBook">
-                    <Link to='/library' style={{textDecoration: 'none'}}>
-                        <BookImage src="/assets/img/books/monje.jpg" alt="book1" price={1950} />
-                    </Link>
-                </div>
-                <div className="featuredBook">
-                    <Link to='/library' style={{textDecoration: 'none'}}>
-                        <BookImage src="/assets/img/books/secretos.jpg" alt="book2" price={1950} />
-                    </Link>
-                </div>
-                <div className="featuredBook">
-                    <Link to='/library' style={{textDecoration: 'none'}}>
-                        <BookImage src="/assets/img/books/elon.jpg" alt="book3" price={1950} />
-                    </Link>
-                </div>
-                <div className="featuredBook">
-                    <Link to='/library' style={{textDecoration: 'none'}}>
-                        <BookImage src="/assets/img/books/dinero.jpg" alt="book4" price={1950} />
-                    </Link>
-                </div>
+
+                { booksHome && booksHome?.map((book) => (
+                    <div className="featuredBook" key={book.name}>
+                        <Link to='/library' style={{textDecoration: 'none'}}>
+                            <BookImage src={book.src} alt={book.name} price={book.price} />
+                        </Link>
+                    </div>
+                )) }
             </div>
 
-            {/* <hr style={{width: '70%', margin: 'auto'}} /> */}
-
-            {/* <div className="home__quote">
-                <p className="quote">
-                    <i>"Las metas no se compran en una tienda, sino que nacen de nuestra pasión, de la incomodidad interna, de nuestra inconformidad y de la necesidad de progresar. 
-                        <br />
-                        El progreso es igual a la felicidad. Por ello, si no tienes una meta, estás en graves problemas."
-                    </i>
-                    <br />
-                    - Jonathan Di Tommaso
-                </p>
-                <div className="quote__img">
-                    <img 
-                        alt="Author"
-                        src="/assets/img/jonathan.png"
-                        style={{width: '140px', height: '220px', display: 'inline-flex'}}
-                    />
-                </div>
-            </div> */}
             </>
             : 
             <div className="home__loading">
                 <PuffLoader 
                 color={"#544D4B"} 
                 size={100}
-            />
+                />
             </div>
         }
         </div>

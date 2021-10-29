@@ -1,6 +1,12 @@
 .know__newsContainer
     width: 280px
     margin: auto
+    >img
+        clip-path: circle(30% at 50% 50%)
+        width: 250px
+        object-fit: cover
+        &:hover
+            cursor: pointer
 
 .know__title
     width: 180px
@@ -13,17 +19,6 @@
 .know__title:hover
     color: #0D6EFD
     cursor: pointer
-
-.know__newsPhotos
-    display: flex
-    width: 125px
-    height: 125px
-    margin-left: 10px
-
-    >img
-        clip-path: circle(30% at 50% 50%)
-        &:hover
-            cursor: pointer
 
 @media (max-width: 500px)
     .know__title

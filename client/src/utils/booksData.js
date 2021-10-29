@@ -5,7 +5,8 @@ export const booksData = [
         author: "Robert Kiyosaki",
         src: "/assets/img/books/padrerico.jpg",
         id: '3629017380296837263634444',
-        category: 'finance'
+        category: 'finance',
+        featured: false
     },
     {
         name: "El cuadrante del flujo del dinero",
@@ -13,7 +14,8 @@ export const booksData = [
         author: "Robert Kiyosaki",
         src: "/assets/img/books/cuadrante.jpg",
         id: '362901738076435789',
-        category: 'finance' 
+        category: 'finance',
+        featured: false 
     },
     {
         name: "Retirate joven y rico",
@@ -21,7 +23,8 @@ export const booksData = [
         author: "Robert Kiyosaki",
         src: "/assets/img/books/retirate.jpg",
         id: '362901738236790532',
-        category: 'finance' 
+        category: 'finance',
+        featured: false 
     },
     {
         name: "Guia para invertir",
@@ -29,7 +32,8 @@ export const booksData = [
         author: "Robert Kiyosaki",
         src: "/assets/img/books/guiaparainvertir.jpg",
         id: '3629017380858385876',
-        category: 'finance'
+        category: 'finance',
+        featured: false
     },
     {
         name: "Elon Musk",
@@ -37,7 +41,8 @@ export const booksData = [
         author: "Ashlee Vance",
         src: "/assets/img/books/musk.jpg",
         id: '3629017382323898900093333',
-        category: 'biographies' 
+        category: 'biographies',
+        featured: true 
     },
     {
         name: "7 habitos de la gente altamente efectiva",
@@ -45,7 +50,8 @@ export const booksData = [
         author: "Stephen Covey",
         src: "/assets/img/books/7habitos.jpg",
         id: '36290173844455621457942',
-        category: 'personalDevelopment' 
+        category: 'personalDevelopment',
+        featured: false 
     },
     {
         name: "Los secretos de la mente millonaria",
@@ -53,7 +59,8 @@ export const booksData = [
         author: "Harv Eker",
         src: "/assets/img/books/secretos.jpg",
         id: '36290173844455621457942',
-        category: 'finance' 
+        category: 'finance',
+        featured: true 
     },
     {
         name: "Dinero: Domina el juego",
@@ -61,7 +68,8 @@ export const booksData = [
         author: "Anthony Robbins",
         src: "/assets/img/books/dinero.jpg",
         id: '36290173844455621457942',
-        category: 'finance' 
+        category: 'finance',
+        featured: true 
     },
     {
         name: "El arte de la negociación",
@@ -69,7 +77,8 @@ export const booksData = [
         author: "Donald Trump",
         src: "/assets/img/books/negociacion.jpg",
         id: '36290173832321090000',
-        category: 'finance' 
+        category: 'finance',
+        featured: false 
     },
     {
         name: "Los hombres son de Marte, las mujeres son de Venus",
@@ -77,7 +86,8 @@ export const booksData = [
         author: "John Gray",
         src: "/assets/img/books/martevenus.jpg",
         id: '36290173812233445543',
-        category: 'personalDevelopment' 
+        category: 'personalDevelopment',
+        featured: false 
     },
     {
         name: "El santo, el surfista y el ejecutivo",
@@ -85,7 +95,8 @@ export const booksData = [
         author: "Robin Sharma",
         src: "/assets/img/books/santo.png",
         id: '362901738677889',
-        category: 'personalDevelopment'  
+        category: 'personalDevelopment',
+        featured: false  
     },
     {
         name: "Leonardo da Vinci",
@@ -93,7 +104,8 @@ export const booksData = [
         author: "Serge Bramly",
         src: "/assets/img/books/davinci.png",
         id: '36290173876789098767',
-        category: 'biographies'   
+        category: 'biographies',
+        featured: false   
     },
     {
         name: "Slim",
@@ -101,7 +113,8 @@ export const booksData = [
         author: "Diego Osorno",
         src: "/assets/img/books/slim.jpg",
         id: '362901738324243243423',
-        category: 'biographies'   
+        category: 'biographies',
+        featured: false   
     },
     {
         name: "SOS Pymes",
@@ -109,7 +122,8 @@ export const booksData = [
         author: "Luciana Paulise",
         src: "/assets/img/books/sospymes.png",
         id: '3629017381234354',
-        category: 'finance' 
+        category: 'finance',
+        featured: false 
     },
     {
         name: "Vender como cracks",
@@ -117,7 +131,8 @@ export const booksData = [
         author: "Victor Küppers",
         src: "/assets/img/books/vender.png",
         id: '362901738445763',
-        category: 'finance'   
+        category: 'finance',
+        featured: false   
     },
     {
         name: "Poder sin limites",
@@ -125,7 +140,8 @@ export const booksData = [
         author: "Anthony Robbins",
         src: "/assets/img/books/podersinlimites.jpg",
         id: '362901738999333444',
-        category: 'personalDevelopment' 
+        category: 'personalDevelopment',
+        featured: false 
     },
     {
         name: "¿Quién se ha llevado mi queso?",
@@ -133,7 +149,8 @@ export const booksData = [
         author: "Spencer Johnson",
         src: "/assets/img/books/quienqueso.jpg",
         id: '36290173872323257679',
-        category: 'personalDevelopment'  
+        category: 'personalDevelopment',
+        featured: false  
     },
     {
         name: "Resistencia",
@@ -141,7 +158,8 @@ export const booksData = [
         author: "Scott Kelly",
         src: "/assets/img/books/resistencia.jpg",
         id: '36290173834343467',
-        category: 'biographies'  
+        category: 'biographies',
+        featured: false  
     },
     {
         name: "Astronomía para ser entendida",
@@ -149,7 +167,8 @@ export const booksData = [
         author: "Oscar Costa",
         src: "/assets/img/books/astronomia.jpg",
         id: '36290173809876543',
-        category: ''  
+        category: '',
+        featured: false  
     },
     {
         name: "Astrofísica para gente apurada",
@@ -157,7 +176,8 @@ export const booksData = [
         author: "Neil deGrasse Tyson",
         src: "/assets/img/books/astrofisica.jpg",
         id: '3629017386565632',
-        category: ''  
+        category: '',
+        featured: false  
     },
     {
         name: "Centurio",
@@ -165,7 +185,8 @@ export const booksData = [
         author: "Massimiliano Colombo",
         src: "/assets/img/books/centurio.png",
         id: '36290173877665566',
-        category: ''  
+        category: '',
+        featured: false  
     },
     {
         name: "50 clásicos de la prosperidad",
@@ -173,7 +194,8 @@ export const booksData = [
         author: "Tom Butler-Bowdon",
         src: "/assets/img/books/50clasicos.png",
         id: '362901738009988',
-        category: 'personalDevelopment' 
+        category: 'personalDevelopment',
+        featured: false 
     },
     {
         name: "El monje que vendió su Ferrari",
@@ -181,7 +203,8 @@ export const booksData = [
         author: "Robin Sharma",
         src: "/assets/img/books/monje.jpg",
         id: '362901738009988',
-        category: 'personalDevelopment' 
+        category: 'personalDevelopment',
+        featured: true 
     },
     {
         name: "El estilo Virgin",
@@ -189,7 +212,8 @@ export const booksData = [
         author: "Richard Branson",
         src: "/assets/img/books/estilovirgin.jpg",
         id: '362901738458000',
-        category: 'biographies'  
+        category: 'biographies',
+        featured: false  
     },
     {
         name: "Steve Jobs",
@@ -197,7 +221,8 @@ export const booksData = [
         author: "Walter Isaacson",
         src: "/assets/img/books/jobs.jpg",
         id: '362901738111111787',
-        category: 'biographies' 
+        category: 'biographies',
+        featured: false 
     },
     {
         name: "El libro de Steve Jobs",
@@ -205,7 +230,8 @@ export const booksData = [
         author: "Brent Schlender",
         src: "/assets/img/books/librojobs.jpg",
         id: '362901738397887222',
-        category: 'biographies' 
+        category: 'biographies',
+        featured: false 
     },
     {
         name: "Historia de fracasos y fracasados que cambiaron al mundo",
@@ -213,7 +239,8 @@ export const booksData = [
         author: "Demian Sterman",
         src: "/assets/img/books/fracasos.jpg",
         id: '362901738098483',
-        category: 'biographies' 
+        category: 'biographies',
+        featured: false 
     },
     {
         name: "Cómo ganar amigos e influir sobre las personas",
@@ -221,7 +248,8 @@ export const booksData = [
         author: "Dale Carnegie",
         src: "/assets/img/books/ganaramigos.jpg",
         id: '36290173842347',
-        category: 'personalDevelopment' 
+        category: 'personalDevelopment',
+        featured: false 
     },
     {
         name: "Errores de grandes empresarios",
@@ -229,7 +257,8 @@ export const booksData = [
         author: "Bob Sellers",
         src: "/assets/img/books/errores.jpg",
         id: '3629017381235672',
-        category: 'finance' 
+        category: 'finance',
+        featured: false 
     },
     {
         name: "Cómo empezaron",
@@ -237,7 +266,8 @@ export const booksData = [
         author: "David Lester",
         src: "/assets/img/books/comoempezaron.jpg",
         id: '3629017386789',
-        category: 'finance'  
+        category: 'finance',
+        featured: false  
     },
     {
         name: "Comienza donde estás",
@@ -245,7 +275,8 @@ export const booksData = [
         author: "Chris Gardner",
         src: "/assets/img/books/comienzagardner.jpg",
         id: '362901738098',
-        category: 'personalDevelopment'
+        category: 'personalDevelopment',
+        featured: false
     },
     {
         name: "La semana laboral de 4 horas",
@@ -253,7 +284,8 @@ export const booksData = [
         author: "Tim Ferris",
         src: "/assets/img/books/semana.png",
         id: '3629017381212390',
-        category: 'personalDevelopment' 
+        category: 'personalDevelopment',
+        featured: false 
     },
     {
         name: "El inversor inteligente",
@@ -261,7 +293,8 @@ export const booksData = [
         author: "Benjamin Graham",
         src: "/assets/img/books/inversor.jpg",
         id: '36290173866',
-        category: 'finance' 
+        category: 'finance',
+        featured: false 
     },
     {
         name: "Nunca tires la toalla",
@@ -269,7 +302,8 @@ export const booksData = [
         author: "Donald Trump",
         src: "/assets/img/books/nuncatires.jpg",
         id: '362901738555',
-        category: 'personalDevelopment'  
+        category: 'personalDevelopment',
+        featured: false  
     },
     {
         name: "Piense y hágase rico",
@@ -277,7 +311,8 @@ export const booksData = [
         author: "Napoleon Hill",
         src: "/assets/img/books/piense.jpg",
         id: '362901738888',
-        category: 'personalDevelopment' 
+        category: 'personalDevelopment',
+        featured: false 
     },
     {
         name: "Historias de Forbes",
@@ -285,7 +320,8 @@ export const booksData = [
         author: "Daniel Gross",
         src: "/assets/img/books/historiasforbes.jpg",
         id: '3629017381212',
-        category: 'biographies' 
+        category: 'biographies',
+        featured: false 
     },
     {
         name: "Breve historia de mi vida",
@@ -293,7 +329,8 @@ export const booksData = [
         author: "Stephen Hawking",
         src: "/assets/img/books/hawking.jpg",
         id: '3629017382121213',
-        category: 'biographies'  
+        category: 'biographies',
+        featured: false  
     },
     {
         name: "Hábitos para ser millonario",
@@ -301,7 +338,8 @@ export const booksData = [
         author: "Brian Tracy",
         src: "/assets/img/books/habitostracy.png",
         id: '362901738323',
-        category: 'personalDevelopment'  
+        category: 'personalDevelopment',
+        featured: false  
     },
     {
         name: "Huawei",
@@ -309,7 +347,8 @@ export const booksData = [
         author: "Tian Tao",
         src: "/assets/img/books/huawei.png",
         id: '3629017384',
-        category: 'finance' 
+        category: 'finance',
+        featured: false 
     },
     {
         name: "Queremos que seas rico",
@@ -317,7 +356,8 @@ export const booksData = [
         author: "Kiyosaki - Trump",
         src: "/assets/img/books/queremosqueseasrico.jpg",
         id: '3629017382',
-        category: 'finance' 
+        category: 'finance',
+        featured: false 
     },
     {
         name: "La inteligencia emocional",
@@ -325,7 +365,8 @@ export const booksData = [
         author: "Daniel Goleman",
         src: "/assets/img/books/inteligenciaemocional.jpg",
         id: '3629017383240',
-        category: 'personalDevelopment'
+        category: 'personalDevelopment',
+        featured: false
     },
     {
         name: "El millonario de la puerta de al lado",
@@ -333,6 +374,7 @@ export const booksData = [
         author: "Stanley - Danko",
         src: "/assets/img/books/elmillonario.jpg",
         id: '362901738765',
-        category: 'finance' 
+        category: 'finance',
+        featured: false 
     },
 ]

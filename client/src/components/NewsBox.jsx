@@ -28,7 +28,7 @@ const NewsBox = ({newImage, newTitle, cut, big, content, getNews, description}) 
             }
             {newTitle
                 ?
-                <h6 className={big ? "newsBox__titleBig" : "newsBox__title"}>{newTitle.substring(0, cut)}</h6>
+                <h6 className={big ? "newsBox__titleBig" : "newsBox__title"}>{newTitle}</h6>
                 :
                 <PulseLoader 
                     color={"#544D4B"} 
