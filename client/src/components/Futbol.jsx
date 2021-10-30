@@ -6,6 +6,7 @@ import NewsBox from './NewsBox';
 import GoTopButton from '../utils/GoTopButton';
 import TeamAccessLink from '../utils/TeamAccessLink';
 import NewsService from '../services/NewsService';
+import { ClipLoader } from "react-spinners";
 
 function Futbol() {
 
@@ -27,18 +28,29 @@ function Futbol() {
             <hr />
             
             <div className="futbol__news">
-
-            { futbolNews && futbolNews.map(futbol => (
-                <div className="futbol__newsContainer" key={futbol?.title}>
-                    <NewsBox
-                        newImage={futbol?.urlToImage}
-                        newTitle={futbol?.title}
-                        content={futbol?.content}
-                        description={futbol?.description}
+                { futbolNews 
+                ? futbolNews.map((futbol, i) => (
+                    <div className="futbol__newsContainer" key={futbol?.id}>
+                        {/* <div className={(i === 0) || (i === 1) ? 'containerNewsActive' : ''}> */}
+                            <NewsBox
+                                newImage={futbol?.urlToImage}
+                                newTitle={futbol?.title}
+                                content={futbol?.content}
+                                description={futbol?.description}
+                                id={futbol?.id}
+                            />
+                        {/* </div> */}
+                        
+                    </div>
+                    )) 
+                : <div style={{margin: 'auto'}}>
+                    <ClipLoader
+                        color={"#544D4B"} 
+                        size={50} 
+                        style={{margin: 'auto'}}
                     />
-                </div>
-                )) }
-
+                    </div>
+                }
             </div>
 
             <hr />

@@ -102,7 +102,7 @@
   background-color: #0d61df;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   .bookImageBig {
     width: 100px;
     height: 154px;

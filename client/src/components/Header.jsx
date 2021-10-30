@@ -31,7 +31,7 @@ const Header = ({userGoogle, signOutGoogle}) => {
 
     return ( 
         <>
-            <div className="nav">
+            <div className="customNav">
                 <div className="header__left">
                     <div className="header__weather">
                         <Weather />
@@ -50,7 +50,7 @@ const Header = ({userGoogle, signOutGoogle}) => {
                 </div>
                 <div className="header__right">
                     {!userGoogle 
-                    ? <>
+                    ? <div className="header__links">
                         <Link className="header__link" to='/login'>
                             <Button variant="link" size="md" >
                                 INICIAR SESIÓN
@@ -61,7 +61,7 @@ const Header = ({userGoogle, signOutGoogle}) => {
                                 REGISTRATE
                             </Button>
                         </Link>
-                    </>
+                    </div>
                     :
                     <>
                     <div style={{display: 'flex', alignItems: 'center'}} className="header__name">

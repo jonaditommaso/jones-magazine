@@ -44,7 +44,7 @@ h3:hover {
           justify-content: center;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   .forum {
     margin-left: -40%;
     width: 300px;

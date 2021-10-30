@@ -42,4 +42,26 @@
   font-size: 18px;
   font-weight: 100;
 }
+
+@media (max-width: 600px) {
+  .inside {
+    padding-left: 2px;
+  }
+  .inside__img > img {
+    width: 360px;
+    margin: auto;
+  }
+  .inside__title > h4 {
+    width: 92%;
+  }
+  .inside__description {
+    width: 90%;
+    font-weight: 600;
+  }
+  .inside__content {
+    width: 85%;
+    padding-left: 15px;
+    font-size: 22px;
+  }
+}
 /*# sourceMappingURL=insideNews.css.map */

@@ -22,7 +22,7 @@
 .newsBox__titleBig
     width: 700px
     margin: auto
-    margin-top: 1.2%
+    margin-top: 1%
     font-family: "Zilla Slab", Lora, georgia, times, serif
     font-weight: 600
     font-size: 35px
@@ -45,14 +45,25 @@
 .secondary
     padding: 50px
 
-@media (max-width: 500px)
+@media (max-width: 600px)
+
+    .loaderContainer
+        margin: auto
+    .newsBox
+        margin-bottom: 5%
     .bigBox
         height: 185px
         width: 350px
 
     .newsBox__titleBig
-        width: 300px
-        margin-bottom: 15%
+        width: 340px
 
     .newsBox__title
         margin-bottom: 10%
+        margin: auto
+
+    .container__secondary
+        display: flex
+        flex-direction: column
+    .secondary
+        padding: 15px

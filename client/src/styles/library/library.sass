@@ -37,6 +37,13 @@
     color: #0D6EFD
 
 // .positionGoTopButton
+.library__principalNav
+    width: 90%
+    display: inline-flex
+    justify-content: space-around
+
+.library__filterSidebar
+    display: none
 
 .library__leftHeader
     display: flex
@@ -56,11 +63,20 @@
 .library__allBooks
     width: 80%
     margin: auto
+    padding-top: 15px
 
 .library__filtered
     margin-top: 3%
     display: inline-flex
 
+.hiddenInputSearchBook
+    display: none
+.inputSearchBook
+    display: flex
+    margin: auto
+
+.phone
+    width: 90%
 .library__searchBook
     border: none
     outline: none
@@ -95,8 +111,11 @@
         &::-moz-placeholder
             color: transparent
 
-@media (max-width:500px)
+@media (max-width: 600px)
     .library__carousel
+        display: none
+
+    .library__nav
         display: none
 
     .library__link
@@ -104,12 +123,18 @@
         font-weight: 150
         font-size: 13px
         padding: 0px
+
     .library__rightHeader
         margin-right: 0px
+
     .library__searchBook
         display: block
         font-size: 13px
         margin: auto
     p
-        font-size: 13px
+        font-size: 18px
         margin: auto
+
+    .library__filterSidebar
+        display: flex
+        padding-bottom: 10px

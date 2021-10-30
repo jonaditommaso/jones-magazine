@@ -1,4 +1,4 @@
-.nav {
+.customNav {
   margin-top: 1%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -43,6 +43,10 @@
   margin-bottom: 3%;
 }
 
+.header__links {
+  display: contents;
+}
+
 .header__link {
   display: contents;
   text-decoration: none;
@@ -73,32 +77,46 @@
   cursor: pointer;
 }
 
-@media (max-width: 500px) {
-  .nav {
+@media (max-width: 600px) {
+  .customNav {
     display: block;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    height: 167px;
   }
   .header__center {
     display: block;
   }
   .header__left {
-    margin: auto;
+    margin-left: 2.5%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
-  .header__link > Button {
+  .header__links {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .header__links > Button {
     margin: auto;
   }
   .header__right {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    margin-left: 20px;
-    width: 340px;
+    margin-top: 1%;
+    margin-bottom: 0%;
   }
-  .header__name > h6 {
-    margin-left: 40px !important;
+  .header__name {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .exitIcon {
     font-size: 25px !important;

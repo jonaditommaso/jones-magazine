@@ -1,4 +1,4 @@
-.show
+.showSidebar
     background-color: #fafafa
     width: 310px
     height: 300px
@@ -12,13 +12,13 @@
     overflow: auto
     overflow-x: hidden
 
-.hidden
+.hiddenSidebar
     position: fixed
     top: 0
     left: -100%
     transition: 350ms
 
-.sidebarWrap
+.customSidebarWrap
     margin-top: 2%
     cursor: default
 
@@ -83,3 +83,6 @@
         // color: #0D6EFD
 
         // cursor: pointer
+@media (max-width: 600px)
+    .showSidebar
+        top: 33%

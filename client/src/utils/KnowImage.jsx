@@ -3,11 +3,11 @@ import history from '../history';
 import { getNews } from '../actions';
 import { connect } from 'react-redux';
 
-const KnowImage = ({newImage, newTitle, content, description, getNews}) => {
+const KnowImage = ({newImage, newTitle, content, description, getNews, id}) => {
 
     const handleGoToNew = () => {
         getNews(newTitle, newImage, content, description);
-        history.push('/insidenews');
+        history.push(`/insidenews/${id}`);
     }
 
 

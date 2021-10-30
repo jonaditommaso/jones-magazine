@@ -40,6 +40,19 @@
   color: #0D6EFD;
 }
 
+.library__principalNav {
+  width: 90%;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.library__filterSidebar {
+  display: none;
+}
+
 .library__leftHeader {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -61,6 +74,7 @@
 .library__allBooks {
   width: 80%;
   margin: auto;
+  padding-top: 15px;
 }
 
 .library__filtered {
@@ -68,6 +82,21 @@
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
+}
+
+.hiddenInputSearchBook {
+  display: none;
+}
+
+.inputSearchBook {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: auto;
+}
+
+.phone {
+  width: 90%;
 }
 
 .library__searchBook {
@@ -119,8 +148,11 @@
   color: transparent;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   .library__carousel {
+    display: none;
+  }
+  .library__nav {
     display: none;
   }
   .library__link {
@@ -138,8 +170,14 @@
     margin: auto;
   }
   p {
-    font-size: 13px;
+    font-size: 18px;
     margin: auto;
+  }
+  .library__filterSidebar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding-bottom: 10px;
   }
 }
 /*# sourceMappingURL=library.css.map */

@@ -38,7 +38,7 @@ function App() {
           <Route path='/futbol' exact component={Futbol} />
           <Route path='/finance' exact component={Finance} />
           <Route path='/club/:club' exact component={Club} />
-          <Route path='/insidenews' exact component={InsideTheNews} />
+          <Route path='/insidenews/:id' exact component={InsideTheNews} />
           <Route path='/checkout' exact component={Checkout}>
             <Elements stripe={stripePromise}>
               <Checkout />

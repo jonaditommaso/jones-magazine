@@ -7,12 +7,15 @@ import { booksData } from '../utils/booksData';
 import ShoppingBasketOutlinedIcon from '@material-ui/icons/ShoppingBasketOutlined';
 import { connect } from 'react-redux'
 import GoTopButton from '../utils/GoTopButton';
+// import CarouselItem  from '../utils/CarouselItem';
+import SidebarFilterBooks from '../utils/SidebarFilterBooks'
 
 const Library = ({basket}) => {
 
     const [searchedBook, setSearchedBook] = useState('');
     const [getBook, setGetBook] = useState('');
     const [filterBooks, setFilterBooks] = useState([]);
+    const [showInputToSearch, setShowInputToSearch] = useState(false)
 
     useEffect(() => {
 
@@ -41,7 +44,12 @@ const Library = ({basket}) => {
                 <hr />
                 <div className="library__carousel">
                 <Carousel interval={6000} prevLabel={false} nextLabel={false} variant="dark">
-                    <Carousel.Item >
+                    {/* WHY NOT WORKING? */}
+                    {/* <CarouselItem name="sharma" /> */}
+                    {/* <CarouselItem name="catmull" /> */}
+                    {/* <CarouselItem name="trump" /> */}
+                    {/* <CarouselItem name="kelly" /> */}
+                     <Carousel.Item >
                         <img
                         src="/assets/img/carousel-library/sharma-carousel.png"
                         alt="Sharma"
@@ -76,25 +84,44 @@ const Library = ({basket}) => {
                 </Carousel>
                 </div>
 
-                <div className="library__nav">
-                    <Link className="library__link" onClick={()=> selectFilter('finance')}>FINANZAS</Link> |
-                    <Link className="library__link" onClick={()=> selectFilter('personalDevelopment')}>DESARROLLO PERSONAL</Link> |
-                    <Link className="library__link" onClick={()=> selectFilter('biographies')}>BIOGRAFIAS</Link> |
-                    <Link className="library__link" onClick={()=> selectFilter('moreOrders')}>MAS PEDIDOS</Link> |
-                    {/* <Link className="library__link">CONCURSOS</Link> | */}
+                <div>
+                    <div className="library__nav">
+                        <Link className="library__link" onClick={()=> selectFilter('finance')}>FINANZAS</Link> |
+                        <Link className="library__link" onClick={()=> selectFilter('personalDevelopment')}>DESARROLLO PERSONAL</Link> |
+                        <Link className="library__link" onClick={()=> selectFilter('biographies')}>BIOGRAFIAS</Link> |
+                        <Link className="library__link" onClick={()=> selectFilter('moreOrders')}>MAS PEDIDOS</Link> |
+                        {/* <Link className="library__link">CONCURSOS</Link> | */}
+                        <input 
+                            placeholder="BUSCAR LIBRO" 
+                            className="library__searchBook" 
+                            value={searchedBook}
+                            onChange={(e) => onChangeSearch(e)}
+                        />
+                    </div>
+                    <div className="library__principalNav">
+                        <div className="library__filterSidebar">
+                            <SidebarFilterBooks filter={selectFilter} showSearchInput={setShowInputToSearch} />
+                        </div>
+                        <Link to='/checkout' className="library__link" style={{color: '#0D6EFD'}}>
+                                <ShoppingBasketOutlinedIcon fontSize="large" style={{cursor: 'pointer', display: 'inline'}}/>
+                                {basket.basketList.length}
+                        </Link>
+                    </div>
+                    
+                </div>
+
+                <div className={showInputToSearch ? 'inputSearchBook' : 'hiddenInputSearchBook'}>
                     <input 
                         placeholder="BUSCAR LIBRO" 
-                        className="library__searchBook" 
+                        className="library__searchBook phone" 
                         value={searchedBook}
                         onChange={(e) => onChangeSearch(e)}
                     />
-                    <Link to='/checkout' className="library__link" style={{color: '#0D6EFD'}}>
-                        <ShoppingBasketOutlinedIcon fontSize="large" style={{cursor: 'pointer', display: 'inline'}}/>
-                        {basket.basketList.length}
-                    </Link>
                 </div>
-
+                
                 <hr style={{width: '75%', margin: 'auto'}}/>
+
+                
 
                 <div className="library__featured">
                     {filterBooks?

@@ -64,15 +64,15 @@ function NavBar() {
                 <Sidebar open={setIsOpen} isClicked={handleSidebar} />
             </div>
             <div className="navBar__center">
-                <Link to='finance' className="navBar__link">
+                <Link to='/finance' replace className="navBar__link">
                     FINANZAS
                 </Link>
                 |
-                <Link to='/futbol' className="navBar__link">
+                <Link to='/futbol' replace className="navBar__link">
                     FUTBOL
                 </Link>
                 |
-                <Link to='/library' className="navBar__link">
+                <Link to='/library' replace className="navBar__link">
                     LIBRERIA
                 </Link>
             </div>

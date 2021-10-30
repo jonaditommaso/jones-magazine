@@ -11,13 +11,13 @@ const InsideForum = ({forum}) => {
         <>
             <hr />
             <div className="insideForum">
-                <h4 style={{display: 'inline'}}>
+                <h4>
                     { forum && forum.conversation.title }
                 </h4>
-                <p style={{fontWeight: '300', fontSize: '22px'}}>
+                <p className="insideForum__description">
                     { forum && forum.conversation.description }
                 </p>
-                <div style={{width: '68%', margin: 'auto'}}>
+                <div className="insideForum__content">
                      { forum && forum.conversation.content }
                 </div>
             </div>
@@ -27,7 +27,7 @@ const InsideForum = ({forum}) => {
             <div>
                 <hr style={{width: '60%', margin: 'auto', marginBottom: '2%', marginTop: '1%'}} />
                 <Form>
-                    <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1" style={{width: '450px', margin: 'auto'}}>
+                    <Form.Group className="mb-2" controlId="exampleForm.ControlTextarea1">
                             <Form.Control 
                                 as="textarea" 
                                 placeholder="A mí me parece que ..." 

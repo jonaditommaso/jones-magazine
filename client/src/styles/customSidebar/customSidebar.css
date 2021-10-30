@@ -1,4 +1,4 @@
-.show {
+.showSidebar {
   background-color: #fafafa;
   width: 310px;
   height: 300px;
@@ -17,7 +17,7 @@
   overflow-x: hidden;
 }
 
-.hidden {
+.hiddenSidebar {
   position: fixed;
   top: 0;
   left: -100%;
@@ -25,7 +25,7 @@
   transition: 350ms;
 }
 
-.sidebarWrap {
+.customSidebarWrap {
   margin-top: 2%;
   cursor: default;
 }
@@ -96,4 +96,10 @@
   margin-left: 3%;
   font-weight: 400;
 }
-/*# sourceMappingURL=sidebar.css.map */
+
+@media (max-width: 600px) {
+  .showSidebar {
+    top: 33%;
+  }
+}
+/*# sourceMappingURL=customSidebar.css.map */

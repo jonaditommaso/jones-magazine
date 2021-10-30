@@ -4,11 +4,11 @@ import '../styles/newsBox/newsBox.css';
 import { getNews } from '../actions';
 import history from "../history";
 
-const NewsBox = ({newImage, newTitle, cut, big, content, getNews, description}) => {
+const NewsBox = ({newImage, newTitle, cut, big, content, getNews, description, id}) => {
 
     const handleGoToNew = () => {
         getNews(newTitle, newImage, content, description);
-        history.push('/insidenews');
+        history.push(`/insidenews/${id}`);
     }
 
     return ( 
@@ -26,14 +26,7 @@ const NewsBox = ({newImage, newTitle, cut, big, content, getNews, description}) 
                     size={50} 
                 />
             }
-            {newTitle
-                ?
-                <h6 className={big ? "newsBox__titleBig" : "newsBox__title"}>{newTitle}</h6>
-                :
-                <PulseLoader 
-                    color={"#544D4B"} 
-                    size={6} 
-                />
+            {newTitle && <h6 className={big ? "newsBox__titleBig" : "newsBox__title"}>{newTitle}</h6>
             }
         </div>
     );

@@ -1,4 +1,4 @@
-.nav
+.customNav
     margin-top: 1%
     display: flex
     justify-content: flex-end
@@ -23,6 +23,9 @@
     margin-top: 3%
     margin-bottom: 3%
 
+.header__links
+    display: contents
+
 .header__link
     display: contents
     text-decoration: none
@@ -46,22 +49,28 @@
         color: #0d6efd
         cursor: pointer
 
-@media (max-width: 500px)
-    .nav
+@media (max-width: 600px)
+    .customNav
         display: block
         flex-direction: column
+        height: 167px
     .header__center
         display: block
     .header__left
-        margin: auto
-    .header__link > Button
-        margin: auto
+        margin-left: 2.5%
+        justify-content: space-between
+
+    .header__links
+        display: inline-flex
+        justify-content: center
+        > Button
+            margin: auto
     .header__right
         display: flex
-        margin-left: 20px
-        width: 340px
-    .header__name > h6
-        margin-left: 40px !important
+        margin-top: 1%
+        margin-bottom: 0%
+    .header__name
+        justify-content: center
 
     .exitIcon
         font-size: 25px !important

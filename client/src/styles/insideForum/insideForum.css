@@ -3,7 +3,20 @@
 }
 
 .insideForum > h4 {
+  display: inline;
   font-weight: 600;
   font-size: 35px;
+}
+
+.insideForum__description {
+  font-weight: 300;
+  font-size: 22px;
+  width: 90%;
+}
+
+.insideForum__content {
+  width: 75%;
+  text-align: start;
+  padding-left: 15px;
 }
 /*# sourceMappingURL=insideForum.css.map */

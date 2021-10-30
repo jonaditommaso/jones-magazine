@@ -13,6 +13,7 @@ function NewsBoxContainer({section}) {
                     description={section[1]?.description}
                     content={section[1]?.content}
                     big
+                    id={section[1]?.id}
                 />
             </div>
             
@@ -20,12 +21,13 @@ function NewsBoxContainer({section}) {
                 { section && section?.map((news, i) => {
                     if(i !==1 && i < 4) {
                         return (
-                            <div className="secondary" key={news?.title}>
+                            <div className="secondary" key={news?.id}>
                                 <NewsBox 
                                     newImage={news?.urlToImage}
                                     newTitle={news?.title}
                                     description={news?.description}
                                     content={news?.content}
+                                    id={news?.id}
                                 />
                             </div>
                         )

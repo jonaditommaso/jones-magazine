@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import '../styles/sidebar/sidebar.css';
+import '../styles/customSidebar/customSidebar.css';
 import { sidebarData } from '../utils/sidebarData';
 import SubMenu from './SubMenu';
 
@@ -36,8 +36,8 @@ const Sidebar = ({open, isClicked}) => {
     
     return (
         <>
-            <div className={sidebar ? "show" : "hidden"} >
-                <div className="sidebarWrap">
+            <div className={sidebar ? "showSidebar" : "hiddenSidebar"} >
+                <div className="customSidebarWrap">
                     {sidebarData.map((item, index) => {
                         return (
                             <>

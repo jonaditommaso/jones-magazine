@@ -42,7 +42,7 @@ const Home = () => {
             {news
             ?
             <>
-            <hr />
+            <hr style={{margin: '0px'}}/>
 
             <div className="home__principalNews">
                 <div className="home__principal">
@@ -52,6 +52,7 @@ const Home = () => {
                     content={news[0]?.content}
                     description={news[0]?.description}
                     big
+                    id={news[0]?.id}
                   />
                 </div> 
                 
@@ -62,6 +63,7 @@ const Home = () => {
                             newTitle={news[1]?.title}
                             content={news[1]?.content}
                             description={news[1]?.description}
+                            id={news[1]?.id}
                         />
                     </div>
                     <div className="new__aside">
@@ -70,6 +72,7 @@ const Home = () => {
                             newTitle={news[2]?.title}
                             content={news[2]?.content}
                             description={news[2]?.description}
+                            id={news[2]?.id}
                         />
                     </div>
                 </div>
@@ -87,12 +90,13 @@ const Home = () => {
                         { news && news.map((knowNews, i) => {
                             if(i > 2 && i < 7) {
                                 return (
-                                    <div key={knowNews?.title}>
+                                    <div key={knowNews?.id}>
                                         <KnowImage
                                             newImage={knowNews?.urlToImage}
                                             newTitle={knowNews?.title}
                                             content={knowNews?.content}
                                             description={knowNews?.description}
+                                            id={knowNews?.id}
                                         />
                                     </div>
                                 );
@@ -121,10 +125,12 @@ const Home = () => {
             </>
             : 
             <div className="home__loading">
-                <PuffLoader 
-                color={"#544D4B"} 
-                size={100}
-                />
+                <div className="loadingContain">
+                    <PuffLoader 
+                    color={"#544D4B"} 
+                    size={100}
+                    />
+                </div>
             </div>
         }
         </div>
